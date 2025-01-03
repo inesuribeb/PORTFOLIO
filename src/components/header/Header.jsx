@@ -4,17 +4,28 @@ import './Header.css';
 function Header({ onContactClick }) {
 
   const handleNavClick = () => {
-    // Si Contact está abierto (lo sabremos porque hay un estado shifted), lo cerramos
     const mainContent = document.querySelector('.main-content');
     if (mainContent?.classList.contains('shifted')) {
       onContactClick();
     }
   };
 
+  const handleLinkClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  const handleCombinedClick = () => {
+    handleNavClick();
+    handleLinkClick();
+  };
+
   return (
     <div className="header-container-desktop">
       <div className="header-home-desktop">
-        <Link to="/" onClick={handleNavClick}>
+        <Link to="/" onClick={handleCombinedClick}>
           <h1>Ines Uribe</h1>
         </Link>
       </div>
@@ -22,10 +33,10 @@ function Header({ onContactClick }) {
         <nav>
           <ul>
             <li>
-              <Link to="/art" onClick={handleNavClick}>Art</Link>
+              <Link to="/art" onClick={handleCombinedClick}>Art</Link>
             </li>
             <li>
-              <Link to="/code" onClick={handleNavClick}>Code</Link>
+              <Link to="/code" onClick={handleCombinedClick}>Code</Link>
             </li>
             <li>
               <button

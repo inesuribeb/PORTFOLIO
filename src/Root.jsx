@@ -1,6 +1,6 @@
 import { Outlet, Link } from 'react-router-dom';
 import Header from './components/header/Header';
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import Contact from './pages/contact/Contact';
 import './Root.css'
 
@@ -11,15 +11,15 @@ function Root() {
     useEffect(() => {
         if (isContactOpen) {
             let scrollTimeout;
-            
+
             const handleScroll = () => {
                 clearTimeout(scrollTimeout);
-                
+
                 setIsUserScrolling(true);
-                
+
                 scrollTimeout = setTimeout(() => {
                     setIsUserScrolling(false);
-                    
+
                     if (window.scrollY > 0) {
                         setIsContactOpen(false);
                     }
@@ -36,7 +36,7 @@ function Root() {
 
     const handleContactClick = () => {
         setIsContactOpen(!isContactOpen);
-        
+
         if (!isContactOpen) {
             window.scrollTo({
                 top: 0,
@@ -45,11 +45,13 @@ function Root() {
         }
     };
 
+
+
     return (
-<div className="root-container">
-            <Contact 
-                isOpen={isContactOpen} 
-                onClose={() => setIsContactOpen(false)} 
+        <div className="root-container">
+            <Contact
+                isOpen={isContactOpen}
+                onClose={() => setIsContactOpen(false)}
             />
             <div className={`main-content ${isContactOpen ? 'shifted' : ''}`}>
                 <Header onContactClick={handleContactClick} />
