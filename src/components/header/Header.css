@@ -1,0 +1,71 @@
+.header-container-desktop {
+    display: flex;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 10px;
+    background-color: #f4f4f4;
+    padding: 5px;
+}
+
+.header-home-desktop, .navigator-desktop {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: transparent;
+}
+
+.header-home-desktop {
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.header-home-desktop a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header-home-desktop h1 {
+    font-family: 'Times New Roman';
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0.30em;
+    margin: 0;
+}
+
+.navigator-desktop {
+    justify-content: flex-end;
+    font-size: 15px;
+    font-family: 'Times New Roman';
+    letter-spacing: 0.30em;
+}
+
+.navigator-desktop nav {
+    background-color: transparent;
+}
+
+.navigator-desktop ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+.navigator-desktop li {
+    margin-right: 20px;
+    background-color: transparent;
+}
+
+.navigator-desktop li:last-child {
+    margin-right: 0;
+}
+
+.navigator-desktop a {
+    text-decoration: none;
+    color: black;
+    background-color: transparent;
+}

@@ -6,6 +6,8 @@ import { useMediaQuery } from 'react-responsive';
 import Root from './Root.jsx';
 import RootPhone from './RootPhone.jsx';
 
+import './index.css'
+
 const Home = React.lazy(() => import('./pages/home/Home.jsx'));
 const HomePhone = React.lazy(() => import('./pages/home/HomePhone.jsx'));
 const PhotoDesign = React.lazy(() => import('./pages/art/PhotoDesign.jsx'));
