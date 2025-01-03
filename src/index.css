@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  padding: 5px;
+  /* padding: 5px; */
   background-color: #f4f4f4;
 }
 
@@ -10,7 +10,7 @@ html, body {
   background-color: #f4f4f4;
   flex-direction: column;
   display: flex;
-  padding-top: 40px;
+  /* padding-top: 40px; */
 }
 
 /* Estilos generales para enlaces */

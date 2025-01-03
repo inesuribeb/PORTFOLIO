@@ -1,0 +1,12 @@
+/* .root-container {
+    min-height: 100vh;
+    overflow-x: hidden; 
+}
+
+.main-content {
+    transition: transform 0.3s ease-out;
+}
+
+.main-content.shifted {
+    transform: translateY(100vh);
+} */

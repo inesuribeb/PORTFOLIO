@@ -1,6 +1,6 @@
 .web-section {
     width: calc(100% + 80px); /* 40px por cada lado */
-    margin-left: -40px;
+    margin-left: -20px;
     padding: 0;
    }
    
@@ -12,6 +12,8 @@
     border-top: 1px solid grey;
     box-sizing: border-box;
     /* background-color: aqua; */
+    padding-top: 5px;
+    padding-bottom: 15px;
    }
    
    .first-line h3,

@@ -1,0 +1,13 @@
+.contact-page {
+    width: 100%;
+    height: 0;  /* Empezamos con height 0 */
+    background-color: white;
+    padding: 0;  /* Empezamos sin padding */
+    transition: all 0.3s ease-out;
+    overflow: hidden;
+}
+
+.contact-page.open {
+    height: 70vh;  /* Al abrirse ocupa toda la altura */
+    padding: 2rem;  /* Restauramos el padding */
+}
