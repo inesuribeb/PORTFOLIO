@@ -8,10 +8,10 @@ import RootPhone from './RootPhone.jsx';
 
 const Home = React.lazy(() => import('./pages/home/Home.jsx'));
 const HomePhone = React.lazy(() => import('./pages/home/HomePhone.jsx'));
-const PhotoDesign = React.lazy(() => import('./pages/photodesign/PhotoDesign.jsx'));
-const PhotoDesignPhone = React.lazy(() => import('./pages/photodesign/PhotoDesignPhone.jsx'));
-const WebProjects = React.lazy(() => import('./pages/webprojects/WebProjects.jsx'));
-const WebProjectsPhone = React.lazy(() => import('./pages/webprojects/WebProjectsPhone.jsx'));
+const PhotoDesign = React.lazy(() => import('./pages/art/PhotoDesign.jsx'));
+const PhotoDesignPhone = React.lazy(() => import('./pages/art/PhotoDesignPhone.jsx'));
+const WebProjects = React.lazy(() => import('./pages/code/WebProjects.jsx'));
+const WebProjectsPhone = React.lazy(() => import('./pages/code/WebProjectsPhone.jsx'));
 const Contact = React.lazy(() => import('./pages/contact/Contact.jsx'));
 const ContactPhone = React.lazy(() => import('./pages/contact/ContactPhone.jsx'));
 

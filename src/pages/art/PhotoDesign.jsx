@@ -1,6 +1,7 @@
 function PhotoDesign() {
     return (
       <>
+      <h1>art</h1>
       </>
     );
   }
