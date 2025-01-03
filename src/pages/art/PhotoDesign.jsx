@@ -1,14 +1,14 @@
 import './PhotoDesign.css';
 import React, { useState } from 'react';
-
+import Modal from './Modal';
 
 function PhotoDesign() {
 
   const [selectedCategory, setSelectedCategory] = useState('All');
 
  
-  // const [isModalOpen, setIsModalOpen] = useState(false);
-  // const [selectedImage, setSelectedImage] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const column1Images = [
     { src: "/CAPTURAS/1.png", alt: "imagen de un niño", category: "Photography", order: 1 },
@@ -57,22 +57,25 @@ function PhotoDesign() {
 
 
 
-  // const handleImageClick = (image) => {
-  //   setSelectedImage(image);
-  //   setIsModalOpen(true);
-  // };
+  const handleImageClick = (image) => {
+    setSelectedImage(image);
+    setIsModalOpen(true);
+  };
 
-  // const handleNextImage = () => {
-  //   const currentIndex = filteredImages.indexOf(selectedImage);
-  //   const nextIndex = (currentIndex + 1) % filteredImages.length;
-  //   setSelectedImage(filteredImages[nextIndex]);
-  // };
+  const handleNextImage = () => {
+    const currentOrder = selectedImage.order;
+    const nextImage = filteredImages.find(img => img.order > currentOrder) || filteredImages[0];
+    setSelectedImage(nextImage);
+  };
 
-  // const handlePreviousImage = () => {
-  //   const currentIndex = filteredImages.indexOf(selectedImage);
-  //   const previousIndex = (currentIndex - 1 + filteredImages.length) % filteredImages.length;
-  //   setSelectedImage(filteredImages[previousIndex]);
-  // };
+  const handlePreviousImage = () => {
+    const currentOrder = selectedImage.order;
+    const previousImages = filteredImages.filter(img => img.order < currentOrder);
+    const previousImage = previousImages.length > 0 
+      ? previousImages[previousImages.length - 1] 
+      : filteredImages[filteredImages.length - 1];
+    setSelectedImage(previousImage);
+  };
 
 
 
@@ -90,7 +93,7 @@ function PhotoDesign() {
                   src={img.src}
                   alt={img.alt}
                   loading="lazy"
-                  // onClick={() => handleImageClick(img)}
+                  onClick={() => handleImageClick(img)}
                 />
               ))}
           </div>
@@ -103,7 +106,7 @@ function PhotoDesign() {
                   src={img.src}
                   alt={img.alt}
                   loading="lazy"
-                  // onClick={() => handleImageClick(img)}
+                  onClick={() => handleImageClick(img)}
                 />
               ))}
           </div>
@@ -116,7 +119,7 @@ function PhotoDesign() {
                   src={img.src}
                   alt={img.alt}
                   loading="lazy"
-                  // onClick={() => handleImageClick(img)}
+                  onClick={() => handleImageClick(img)}
                 />
               ))}
           </div>
@@ -136,6 +139,7 @@ function PhotoDesign() {
               src={img.src}
               alt={img.alt}
               loading="lazy"
+              onClick={() => handleImageClick(img)}
             />
           ))}
         </div>
@@ -170,6 +174,13 @@ function PhotoDesign() {
       <section className="contentContainer">
         {renderContent()}
       </section>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        image={selectedImage}
+        onNext={handleNextImage}
+        onPrevious={handlePreviousImage}
+      />
     </>
   );
 }

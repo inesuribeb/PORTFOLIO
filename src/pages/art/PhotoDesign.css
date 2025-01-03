@@ -41,6 +41,10 @@
     opacity: 1;
 }
 
+.contentContainer img:hover {
+    cursor: pointer;
+}
+
 
 .column1, .column2, .column3 {
     flex: 1;  
