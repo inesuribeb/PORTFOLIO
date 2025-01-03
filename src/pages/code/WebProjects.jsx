@@ -30,9 +30,9 @@ function WebProjects() {
 
   const projectsData = [
     {
-      title: "WWW MAGAZINE",
-      description: "WWW is an online magazine with impersonal content without any path.",
-      method: "Magazine • Editorial design • Web design",
+      title: "SWIPE AGENCY",
+      description: "SWIPE AGENCY is a fashion representation agency based in Bilbao. Its brands combine design and tradition.",
+      method: "React • JavaScript • CSS3",
       link: "www.wwwmagazine.com",
       images: [{ src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/FD66/F92E/79C5/D07A/0A28/100B/4C14/rectangle_yellow_flag.jpg", alt: "descripción1" },
       // { src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/F886/BB3A/522C/CB5B/0A28/100A/2578/blue_rectangle.jpg", alt: "descripción2" },
@@ -45,9 +45,9 @@ function WebProjects() {
       { src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/FD66/F92E/79C5/D07A/0A28/100B/4C14/rectangle_yellow_flag.jpg", alt: "descripción2" },]
     },
     {
-      title: "WWW MAGAZINE",
-      description: "WWW is an online magazine with impersonal content without any path.",
-      method: "Magazine • Editorial design • Web design",
+      title: "MACHIMBAG",
+      description: "MACHIMBA is an online store offering unique, limited-edition bags designed and crafted by Rocío Machimbarrena.",
+      method: "Node.js • MySQL • JavaScript • Pug • CSS3",
       link: "www.wwwmagazine.com",
       images: [{ src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/FD66/F92E/79C5/D07A/0A28/100B/4C14/rectangle_yellow_flag.jpg", alt: "descripción1" },
       { src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/FD66/F92E/79C5/D07A/0A28/100B/4C14/rectangle_yellow_flag.jpg", alt: "descripción2" },
@@ -58,9 +58,9 @@ function WebProjects() {
       { src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/FD66/F92E/79C5/D07A/0A28/100B/4C14/rectangle_yellow_flag.jpg", alt: "descripción2" },]
     },
     {
-      title: "WWW MAGAZINE",
-      description: "WWW is an online magazine with impersonal content without any path.",
-      method: "Magazine • Editorial design • Web design",
+      title: "The Bike Country",
+      description: "TBC is a premium tourism company specialized in cycling in the Basque Country (Euskadi).",
+      method: "MySQL • React • CSS3 • JavaScript",
       link: "www.wwwmagazine.com",
       images: [{ src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/FD66/F92E/79C5/D07A/0A28/100B/4C14/rectangle_yellow_flag.jpg", alt: "descripción1" },
       { src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/FD66/F92E/79C5/D07A/0A28/100B/4C14/rectangle_yellow_flag.jpg", alt: "descripción2" },
@@ -71,9 +71,9 @@ function WebProjects() {
       { src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/FD66/F92E/79C5/D07A/0A28/100B/4C14/rectangle_yellow_flag.jpg", alt: "descripción2" },]
     },
     {
-      title: "WWW MAGAZINE",
-      description: "WWW is an online magazine with impersonal content without any path.",
-      method: "Magazine • Editorial design • Web design",
+      title: "KHROMA",
+      description: "Khroma is a project that allows users to explore and generate custom color schemes.",
+      method: "JavaScript • API REST • CSS3",
       link: "www.wwwmagazine.com",
       images: [{ src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/FD66/F92E/79C5/D07A/0A28/100B/4C14/rectangle_yellow_flag.jpg", alt: "descripción1" },
       { src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/FD66/F92E/79C5/D07A/0A28/100B/4C14/rectangle_yellow_flag.jpg", alt: "descripción2" },
@@ -84,9 +84,9 @@ function WebProjects() {
       { src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/FD66/F92E/79C5/D07A/0A28/100B/4C14/rectangle_yellow_flag.jpg", alt: "descripción2" },]
     },
     {
-      title: "WWW MAGAZINE",
-      description: "WWW is an online magazine with impersonal content without any path.",
-      method: "Magazine • Editorial design • Web design",
+      title: "BYTE BITES",
+      description: "Byte Bites is a web platform designed to make exploring and discovering recipes easier.",
+      method: "JavaScript • API REST • CSS3",
       link: "www.wwwmagazine.com",
       images: [{ src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/FD66/F92E/79C5/D07A/0A28/100B/4C14/rectangle_yellow_flag.jpg", alt: "descripción1" },
       { src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/FD66/F92E/79C5/D07A/0A28/100B/4C14/rectangle_yellow_flag.jpg", alt: "descripción2" },
