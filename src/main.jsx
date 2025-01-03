@@ -1,10 +1,75 @@
-import { StrictMode } from 'react'
+import React, { StrictMode, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
+
+import Root from './Root.jsx';
+import RootPhone from './RootPhone.jsx';
+
+const Home = React.lazy(() => import('./pages/home/Home.jsx'));
+const HomePhone = React.lazy(() => import('./pages/home/HomePhone.jsx'));
+const PhotoDesign = React.lazy(() => import('./pages/photodesign/PhotoDesign.jsx'));
+const PhotoDesignPhone = React.lazy(() => import('./pages/photodesign/PhotoDesignPhone.jsx'));
+const WebProjects = React.lazy(() => import('./pages/webprojects/WebProjects.jsx'));
+const WebProjectsPhone = React.lazy(() => import('./pages/webprojects/WebProjectsPhone.jsx'));
+const Contact = React.lazy(() => import('./pages/contact/Contact.jsx'));
+const ContactPhone = React.lazy(() => import('./pages/contact/ContactPhone.jsx'));
+
+const ResponsiveComponent = ({ MobileVersion, DesktopVersion }) => {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+  
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      {isMobile ? <MobileVersion /> : <DesktopVersion />}
+    </Suspense>
+  );
+};
+
+const RootWrapper = () => {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+  return isMobile ? <RootPhone /> : <Root />;
+};
+
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <ResponsiveComponent 
+      MobileVersion={HomePhone} 
+      DesktopVersion={Home} 
+    /> 
+  },
+  {
+    path: '/',
+    element: <RootWrapper />,  
+    children: [
+      {
+        path: 'art',
+        element: <ResponsiveComponent 
+          MobileVersion={PhotoDesignPhone} 
+          DesktopVersion={PhotoDesign} 
+        />
+      },
+      {
+        path: 'code',
+        element: <ResponsiveComponent 
+          MobileVersion={WebProjectsPhone} 
+          DesktopVersion={WebProjects} 
+        />
+      },
+      {
+        path: 'contact',
+        element: <ResponsiveComponent 
+          MobileVersion={ContactPhone} 
+          DesktopVersion={Contact} 
+        />
+      }
+    ]
+  }
+]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
-  </StrictMode>,
-)
+    <RouterProvider router={router} />
+  </StrictMode>
+);
