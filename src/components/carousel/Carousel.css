@@ -6,7 +6,7 @@
 .carousel {
     height: 280px;
     width: 100%;
-    overflow-x: auto;
+    /* overflow-x: auto; */
     overflow-y: hidden;
     white-space: nowrap;
 }
@@ -17,4 +17,8 @@
     width: auto;
     display: inline-block;
     animation: scroll 50s linear infinite;
+ }
+
+ .carousel > img {
+    padding: 10px;
  }
