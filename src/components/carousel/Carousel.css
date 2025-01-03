@@ -1,0 +1,20 @@
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+   }
+
+.carousel {
+    height: 280px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+
+.carousel > * {
+    height: 100%;
+    width: auto;
+    display: inline-block;
+    animation: scroll 50s linear infinite;
+ }

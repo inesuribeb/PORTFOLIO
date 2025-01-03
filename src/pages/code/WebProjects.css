@@ -1,0 +1,12 @@
+.web-projects {
+    transition: margin-bottom 0.5s ease;
+}
+
+.web-section {
+    margin-bottom: 10px;
+    transition: margin-bottom 0.5s ease;
+}
+
+.web-section.active {
+    margin-bottom: 180px;
+}
