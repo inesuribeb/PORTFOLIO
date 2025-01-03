@@ -1,0 +1,86 @@
+.categories {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 100px; /* Ajusta esto según necesites */
+    font-family: 'Times New Roman';
+    font-size: 28px;
+    letter-spacing: 0.05em;
+    margin-bottom: 100px;
+}
+
+.categories span {
+    cursor: pointer;
+}
+
+.categories span:hover {
+    opacity: 0.4;
+}
+
+.categories span.active {
+    opacity: 0.4;
+}
+
+/* .separator {
+    margin: 0 5px;
+} */
+
+.contentContainer {
+    display: flex; 
+    width: 100%; 
+    gap: 15px;
+    padding-top: 80px;
+    font-size: 0;
+    border-top: 2px solid black;
+}
+
+.column1, .column2, .column3 {
+    flex: 15px; 
+    padding: 5px;
+    
+}
+
+.column1 img,
+.column2 img,
+.column3 img {
+    width: 100%; 
+    height: auto; 
+    /* margin: 10px; */
+    padding-bottom: 20px;
+    /* background: #DBDED5; */
+    transition: opacity 0.3s ease;
+    opacity: 1;
+
+}
+
+.column1 img:not([src]),
+.column2 img:not([src]),
+.column3 img:not([src]) {
+    background: #DBDED5;
+     /* O el alto que prefieras para el skeleton */
+}
+
+.column1 img.loaded,
+.column2 img.loaded,
+.column3 img.loaded {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .mensajeInicio {
+        display: none;
+    }
+
+    .contentContainer {
+        flex-direction: column; 
+        padding-top: 100px; 
+    }
+
+    .column1, .column2, .column3 {
+        flex: 1; 
+    }
+
+    .texto {
+        margin-top: 50px; 
+        font-size: 1.2em; 
+    }
+}
