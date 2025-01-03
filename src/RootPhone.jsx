@@ -1,10 +1,10 @@
 import { Outlet } from 'react-router-dom';
-import Header from './components/Header';
+import HeaderPhone from './components/header/HeaderPhone';
 
 function RootPhone() {
   return (
     <>
-      <Header />
+      <HeaderPhone />
       <Outlet />
     </>
   );
