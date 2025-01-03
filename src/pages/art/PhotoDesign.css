@@ -1,11 +1,11 @@
 .categories {
     text-align: center;
     padding: 20px 0;
-    margin-top: 100px; /* Ajusta esto según necesites */
+    margin-top: 130px;
     font-family: 'Times New Roman';
     font-size: 28px;
     letter-spacing: 0.05em;
-    margin-bottom: 100px;
+    margin-bottom: 90px;
 }
 
 .categories span {
@@ -25,18 +25,28 @@
 } */
 
 .contentContainer {
-    display: flex; 
-    width: 100%; 
-    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
     padding-top: 80px;
-    font-size: 0;
     border-top: 2px solid black;
+
 }
 
+.contentContainer img {
+    width: 100%;
+    height: auto;
+    /* background: #DBDED5; */
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+
+
 .column1, .column2, .column3 {
-    flex: 15px; 
-    padding: 5px;
-    
+    flex: 1;  
+    display: flex;
+    flex-direction: column;
+    gap: 20px;  
 }
 
 .column1 img,
@@ -44,24 +54,8 @@
 .column3 img {
     width: 100%; 
     height: auto; 
-    /* margin: 10px; */
-    padding-bottom: 20px;
-    /* background: #DBDED5; */
+    display: block; 
     transition: opacity 0.3s ease;
-    opacity: 1;
-
-}
-
-.column1 img:not([src]),
-.column2 img:not([src]),
-.column3 img:not([src]) {
-    background: #DBDED5;
-     /* O el alto que prefieras para el skeleton */
-}
-
-.column1 img.loaded,
-.column2 img.loaded,
-.column3 img.loaded {
     opacity: 1;
 }
 
