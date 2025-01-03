@@ -4,8 +4,11 @@ import React, { useState } from 'react';
 
 function PhotoDesign() {
 
-
   const [selectedCategory, setSelectedCategory] = useState('All');
+
+ 
+  // const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [selectedImage, setSelectedImage] = useState(null);
 
   const column1Images = [
     { src: "/CAPTURAS/1.png", alt: "imagen de un niño", category: "Photography", order: 1 },
@@ -51,6 +54,29 @@ function PhotoDesign() {
     ? allImages
     : allImages.filter(img => img.category === selectedCategory);
 
+
+
+
+  // const handleImageClick = (image) => {
+  //   setSelectedImage(image);
+  //   setIsModalOpen(true);
+  // };
+
+  // const handleNextImage = () => {
+  //   const currentIndex = filteredImages.indexOf(selectedImage);
+  //   const nextIndex = (currentIndex + 1) % filteredImages.length;
+  //   setSelectedImage(filteredImages[nextIndex]);
+  // };
+
+  // const handlePreviousImage = () => {
+  //   const currentIndex = filteredImages.indexOf(selectedImage);
+  //   const previousIndex = (currentIndex - 1 + filteredImages.length) % filteredImages.length;
+  //   setSelectedImage(filteredImages[previousIndex]);
+  // };
+
+
+
+
   const renderContent = () => {
     if (selectedCategory === 'All') {
       return (
@@ -64,6 +90,7 @@ function PhotoDesign() {
                   src={img.src}
                   alt={img.alt}
                   loading="lazy"
+                  // onClick={() => handleImageClick(img)}
                 />
               ))}
           </div>
@@ -76,6 +103,7 @@ function PhotoDesign() {
                   src={img.src}
                   alt={img.alt}
                   loading="lazy"
+                  // onClick={() => handleImageClick(img)}
                 />
               ))}
           </div>
@@ -88,6 +116,7 @@ function PhotoDesign() {
                   src={img.src}
                   alt={img.alt}
                   loading="lazy"
+                  // onClick={() => handleImageClick(img)}
                 />
               ))}
           </div>

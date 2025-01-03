@@ -9,16 +9,25 @@
     /* overflow-x: auto; */
     overflow-y: hidden;
     white-space: nowrap;
+    gap:10px;
 }
 
 
-.carousel > * {
+/* .carousel > * {
     height: 100%;
     width: auto;
     display: inline-block;
     animation: scroll 50s linear infinite;
- }
+ } */
 
  .carousel > img {
-    padding: 10px;
+    /* padding: 10px; */
+    object-fit: cover;
+    
+    height: 100%;
+    width: auto;
+    display: inline-block;
+    animation: scroll 50s linear infinite;
+
+    margin-right: 10px;
  }
