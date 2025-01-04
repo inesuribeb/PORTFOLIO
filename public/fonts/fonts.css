@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'IUB';
+    src: url('../fonts/CormorantGaramond-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Erotique';
+    src: url('../fonts/ErotiqueAlternateTrial-Regular.ttf') format('truetype');
+}

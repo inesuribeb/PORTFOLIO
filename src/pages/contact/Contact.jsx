@@ -21,7 +21,7 @@ function Contact({ isOpen, onClose }) {
 
             <div className='first-column-contact'>
                 <div className='first-line-contact'>
-                    <h5>Bilbao, Basque Country<br />
+                    <h5>Bilbao, Spain<br />
                         {`${time.getHours() % 12 || 12}:${String(time.getMinutes()).padStart(2, '0')} ${time.getHours() >= 12 ? 'PM' : 'AM'}`}
                     </h5>
                 </div>

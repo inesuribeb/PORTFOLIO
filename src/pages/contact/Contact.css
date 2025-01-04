@@ -3,6 +3,7 @@
     height: 0;
     /* background-color: #F6E319; */
     background-color: #D8533B;
+    /* background-color: #4D1512; */
     /* background-color: #481311; */
     /* background-color: #220908; */
     padding: 0;
@@ -47,9 +48,15 @@
     font-weight: 300;
     box-sizing: border-box;
     font-size: clamp(0.8rem, 1vw, 1rem);
+    /* color: #E69CA5; */
     color: black;
 
 
+}
+
+@font-face {
+    font-family: 'Erotique';
+    src: url('../fonts/ErotiqueAlternateTrial-Regular.ttf') format('truetype');
 }
 
 .third-column-contact p {
@@ -57,7 +64,9 @@
     font-size: clamp(1rem, 1.65vw, 1.65rem);
     font-family: 'Times New Roman', Times, serif;
     box-sizing: border-box;
+    /* color: #E69CA5; */
     color: black;
+    /* font-family: 'Erotique'; */
 
 }
 
@@ -80,6 +89,7 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 100;
     width: 80%;
+    /* color: #E69CA5; */
     color: black;
 }
 
@@ -126,14 +136,15 @@
 
 .contact-page .close-button {
     position: absolute;
-    top: 1.1rem;
+    top: 1.4rem;
     right: 1rem;
     /* padding: 10px; */
     background-color: transparent;
     border: none;
     font-size: 30px;
     font-family: Arial;
-    color: #000000;
+    /* color: #E69CA5; */
+    color: black;
     cursor: pointer;
     font-size: 0.83em;
 }
