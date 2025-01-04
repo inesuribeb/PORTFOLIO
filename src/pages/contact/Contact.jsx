@@ -43,7 +43,8 @@ function Contact({ isOpen, onClose }) {
 
             <div className='second-column-contact'>
                 <div className='first-line-contact'>
-                    <h5>Welcome!</h5>
+                    {/* <h5>Welcome!</h5> */}
+                    <img src="/CAPTURAS/iub.png" alt="" />
                 </div>
                 <div className='second-line-contact'>
                     <h5>Links</h5>

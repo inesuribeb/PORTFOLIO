@@ -1,48 +1,51 @@
 .web-section {
-    width: calc(100% + 80px); /* 40px por cada lado */
-    margin-left: -20px;
+    width: 100vw;
+    margin-left: calc((100% - 100vw) / 2);
+    margin-right: calc((100% - 100vw) / 2);
     padding: 0;
-   }
-   
-   .first-line {
+}
+
+.web-section .first-line h3,
+.web-section .first-line p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.first-line {
     display: flex;
     justify-content: space-between;
     align-items: top;
-    /* padding: 20px 40px; */
-    border-top: 1px solid grey;
+    border-top: 1px solid rgb(165, 165, 165);
     box-sizing: border-box;
-    /* background-color: aqua; */
     padding-top: 5px;
     padding-bottom: 15px;
-   }
-   
-   .first-line h3,
-   .first-line p {
+}
+
+.first-line h3,
+.first-line p {
     margin: 0;
     font-family: 'Times New Roman', Times, serif;
     margin-inline: 1em;
     display: block;
     font-size: 12px;
-   }
+}
 
-   .first-line h3 {
+.first-line h3 {
     font-size: 18px
-   }
+}
 
-   .first-line h3 svg {
-    /* Estilo para el ícono */
-    width: 16px;  /* o el tamaño que prefieras */
+.first-line h3 svg {
+    width: 16px;
     height: 16px;
     margin-left: 4px;
     vertical-align: top;
 }
-   
-   .second-line {
+
+.second-line {
     width: 100%;
     margin-top: 0px;
-   }
-   
-   .second-line .carousel {
+}
+
+.second-line .carousel {
     width: 100%;
     overflow: hidden;
-   }
+}
