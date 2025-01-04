@@ -7,7 +7,7 @@
 
 .web-section .first-line h3,
 .web-section .first-line p {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Pragmatica';
 }
 
 .first-line {
@@ -23,14 +23,14 @@
 .first-line h3,
 .first-line p {
     margin: 0;
-    font-family: 'Times New Roman', Times, serif;
     margin-inline: 1em;
     display: block;
     font-size: 12px;
 }
 
 .first-line h3 {
-    font-size: 18px
+    font-size: 20px;
+    letter-spacing: 1.1px;
 }
 
 .first-line h3 svg {

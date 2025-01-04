@@ -71,6 +71,10 @@
     letter-spacing: 0.30em;
 }
 
+.navigator-desktop .active {
+    color:red;
+}
+
 .navigator-desktop nav {
     background-color: transparent;
 }

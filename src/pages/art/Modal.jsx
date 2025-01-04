@@ -6,12 +6,12 @@ function Modal({ isOpen, onClose, image, onNext, onPrevious }) {
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={e => e.stopPropagation()}>
-        <button className="close-button" onClick={onClose}>×</button>
-        <button className="nav-button prev" onClick={onPrevious}>‹</button>
-        <div className="image-wrapper">  {/* Agregamos el wrapper aquí */}
+        {/* <button className="close-button" onClick={onClose}>×</button> */}
+        <button className="nav-button prev" onClick={onPrevious}></button>
+        <div className="image-wrapper" onClick={onNext}>  {/* Agregamos el wrapper aquí */}
           <img src={image.src} alt={image.alt} />
         </div>
-        <button className="nav-button next" onClick={onNext}>›</button>
+        <button className="nav-button next" onClick={onNext}></button>
       </div>
     </div>
   );

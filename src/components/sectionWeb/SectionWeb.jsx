@@ -6,7 +6,7 @@ function SectionWeb({ title, description, method, link, images, className }) {
     return (
         <section className={`web-section ${className}`}>
             <div className="first-line">
-                <h3>{title} <ArrowOutwardIcon></ArrowOutwardIcon> </h3>
+                <h3>#{title} <ArrowOutwardIcon></ArrowOutwardIcon> </h3>
                 <p>{description}</p>
                 <p>{method}</p>
                 <p>{link}</p>

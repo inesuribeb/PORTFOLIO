@@ -1,7 +1,9 @@
-import { Link } from 'react-router-dom';
+import { Link , useLocation} from 'react-router-dom';
 import './Header.css';
 
 function Header({ onContactClick }) {
+
+  const location = useLocation();
 
   const handleNavClick = () => {
     const mainContent = document.querySelector('.main-content');
@@ -22,6 +24,10 @@ function Header({ onContactClick }) {
     handleLinkClick();
   };
 
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
+
   return (
     <div className="header-container-desktop">
       <div className="header-home-desktop">
@@ -33,10 +39,22 @@ function Header({ onContactClick }) {
         <nav>
           <ul>
             <li>
-              <Link to="/art" onClick={handleCombinedClick}>Art</Link>
+              <Link 
+              to="/art" 
+              onClick={handleCombinedClick}
+              className={isActive('/art') ? 'active' : ''}
+              >
+                Art
+              </Link>
             </li>
             <li>
-              <Link to="/code" onClick={handleCombinedClick}>Code</Link>
+              <Link 
+              to="/code" 
+              onClick={handleCombinedClick}
+              className={isActive('/code') ? 'active' : ''}
+              >
+                Code
+              </Link>
             </li>
             <li>
               <button

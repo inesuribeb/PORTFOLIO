@@ -27,7 +27,7 @@
     height: 100%;
     width: auto;
     display: inline-block;
-    animation: scroll 50s linear infinite;
+    animation: scroll 5s linear infinite;
 
     margin-right: 10px;
  }

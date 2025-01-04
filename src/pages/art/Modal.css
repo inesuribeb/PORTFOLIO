@@ -42,12 +42,13 @@
   max-height: 90vh;
   object-fit: contain;
   display: block;
+  cursor: pointer;
 }
 
 .modal-content .close-button {
   position: absolute;
-  top: -40px;
-  right: -40px;
+  top: -50px;
+  right: -50px;
   background: none;
   border: none;
   color: red;
@@ -57,23 +58,26 @@
 }
 
 .nav-button {
-  position: absolute;
-  background: none;
-  border: none;
-  color: red;
-  font-size: 40px;
-  cursor: pointer;
-  padding: 20px;
-  top: 50%;
-  transform: translateY(-50%);
+  position: fixed; ;
+    background: red;  /* o el color que prefieras */
+    border: none;
+    width: 20px;       /* ancho y alto iguales para hacer un círculo */
+    height: 20px;
+    border-radius: 50%; /* esto lo hace circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .nav-button.prev {
-  left: -60px;
+  left: 20px;
 }
 
 .nav-button.next {
-  right: -60px;
+  right: 20px;
 }
 
 .nav-button:hover,

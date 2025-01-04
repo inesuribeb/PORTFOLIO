@@ -74,7 +74,7 @@ function Contact({ isOpen, onClose }) {
                     <h5>inesuribeb@gmail.com</h5>
                 </div>
                 <div className='second-line-contact'>
-                    <p>Designer with a strong background in <i>visual communication</i>, currently expanding my skill set as a <i>full-stack web developer</i>.<br /><br /> With a passion for merging <i>creativity</i> with <i>technology</i>, I aim to create digital experiences that are both <i>aesthetically</i> pleasing and <i>functionally</i> effective. I focus on designing user-centric solutions that balance <i>innovation</i>, <i>design</i> principles, and <i>technical</i> expertise. <br /><br />My approach is rooted in understanding the needs of the user while delivering intuitive, engaging, and visually compelling interfaces. Whether in <i>design</i> or <i>development</i>, I strive to bring a harmonious blend of <i>creativity</i> and <i>precision</i> to every project.</p>
+                    <p>Designer with a strong background in <i>visual communication</i>, currently expanding my skill set as a <i>full-stack web developer</i>.<br /><br /> With a passion for merging <i>creativity</i> with <i>technology</i>, I aim to create digital experiences that are both <i>aesthetically</i> pleasing and <i>functionally</i> effective. I focus on designing user-centric solutions that balance <i>innovation</i>, <i>design principles</i>, and <i>technical expertise</i>.</p>
                 </div>
             </div>
         </div>
