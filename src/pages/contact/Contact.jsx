@@ -1,4 +1,6 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
+import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+
 
 import './Contact.css'
 
@@ -15,25 +17,26 @@ function Contact({ isOpen, onClose }) {
 
     return (
         <div className={`contact-page ${isOpen ? 'open' : ''}`}>
-            {/* <h1>contact</h1> */}
+            <button className="close-button" onClick={onClose}>Close</button>
+
             <div className='first-column-contact'>
                 <div className='first-line-contact'>
                     <h5>Bilbao, Basque Country<br />
-                        {time.toLocaleTimeString('es-ES', {
-                            hour: '2-digit',
-                            minute: '2-digit',
-                            hour12: false
-                        })}
+                        {`${time.getHours() % 12 || 12}:${String(time.getMinutes()).padStart(2, '0')} ${time.getHours() >= 12 ? 'PM' : 'AM'}`}
                     </h5>
                 </div>
                 <div className='second-line-contact'>
                     <h5>Services</h5>
                     <ul>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                        <li>5</li>
+                        <li>Creative Digital Solutions</li>
+                        <li>Full-Stack Web Development</li>
+                        <li>Visual Identity</li>
+                        <li>Interface Design</li>
+                        <li>User Experience</li>
+                        <li>Creative Direction</li>
+                        <li>Content Production</li>
+                        {/* <li>Print & Editorial Design</li> */}
+                        <li>Front-End & Back-End</li>
                     </ul>
                 </div>
             </div>
@@ -45,10 +48,22 @@ function Contact({ isOpen, onClose }) {
                 <div className='second-line-contact'>
                     <h5>Links</h5>
                     <ul>
-                        <li>Github</li>
-                        <li>Instagram</li>
-                        <li>Linkedin</li>
-                        <li>Behance</li>
+                        <li>
+                            <a href="https://github.com/inesuribeb" target="_blank" rel="noopener noreferrer">
+                                Github <ArrowOutwardIcon />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/inesuribeb/" target="_blank" rel="noopener noreferrer">
+                                Instagram <ArrowOutwardIcon />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/in%C3%A9s-uribe-barr%C3%B3n-325305143/" target="_blank" rel="noopener noreferrer">
+                                Linkedin <ArrowOutwardIcon />
+                            </a>
+                        </li>
+                        <li>Behance <ArrowOutwardIcon></ArrowOutwardIcon></li>
                     </ul>
                 </div>
             </div>
@@ -58,7 +73,7 @@ function Contact({ isOpen, onClose }) {
                     <h5>inesuribeb@gmail.com</h5>
                 </div>
                 <div className='second-line-contact'>
-                    <p>As a designer with a strong background in visual communication, I am currently expanding my skill set as a full-stack web developer. With a passion for merging creativity with technology, I aim to create digital experiences that are both aesthetically pleasing and functionally effective. I focus on designing user-centric solutions that balance innovation, design principles, and technical expertise. My approach is rooted in understanding the needs of the user while delivering intuitive, engaging, and visually compelling interfaces. Whether in design or development, I strive to bring a harmonious blend of creativity and precision to every project.</p>
+                    <p>Designer with a strong background in <i>visual communication</i>, currently expanding my skill set as a <i>full-stack web developer</i>.<br /><br /> With a passion for merging <i>creativity</i> with <i>technology</i>, I aim to create digital experiences that are both <i>aesthetically</i> pleasing and <i>functionally</i> effective. I focus on designing user-centric solutions that balance <i>innovation</i>, <i>design</i> principles, and <i>technical</i> expertise. <br /><br />My approach is rooted in understanding the needs of the user while delivering intuitive, engaging, and visually compelling interfaces. Whether in <i>design</i> or <i>development</i>, I strive to bring a harmonious blend of <i>creativity</i> and <i>precision</i> to every project.</p>
                 </div>
             </div>
         </div>

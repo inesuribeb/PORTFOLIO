@@ -1,21 +1,23 @@
 .contact-page {
     width: 100%;
-    height: 0;  /* Empezamos con height 0 */
+    height: 0;
     background-color: #F6E319;
-    padding: 0;  /* Empezamos sin padding */
-    transition: all 0.3s ease-out;
+    padding: 0;
+    transition: all 0.7s ease-out;
     overflow: hidden;
 
-    /* Añadimos el grid pero inicialmente estará oculto */
     display: grid;
     grid-template-columns: calc(15% - 1rem) calc(15% - 1rem) calc(70% - 1rem);
     gap: 2rem;
     box-sizing: border-box;
+    position: relative;
 }
 
 .contact-page.open {
-    height: 90vh;  /* Al abrirse ocupa toda la altura */
-    padding: 2rem;  /* Restauramos el padding */
+    height: 90vh;
+    padding-left: 1rem;
+    padding-top: 0rem;
+    padding-right: 5rem;
     box-sizing: border-box;
 
 }
@@ -28,28 +30,51 @@
     flex-direction: column;
     gap: 4rem;
     box-sizing: border-box;
-    width: 100%; 
+    width: 100%;
     background-color: transparent;
 }
 
 .first-column-contact h5,
 .second-column-contact h5,
-.third-column-contact h5{
+.third-column-contact h5 {
     background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
 }
 
 .third-column-contact p {
+    background-color: transparent;
+    font-size: 1.85rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.third-column-contact p i {
     background-color: transparent;
 }
 
 .first-column-contact ul,
 .second-column-contact ul {
     background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
 }
 
 .first-column-contact li,
 .second-column-contact li {
     background-color: transparent;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    width: 80%;
+}
+
+.second-line-contact ul li a {
+    background-color: transparent;
+}
+
+.second-line-contact ul li a:hover {
+    opacity: 0.7;
 }
 
 .first-line-contact,
@@ -64,8 +89,34 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    height: 60px; /* o el valor que necesites para que quepa el texto con el salto de línea */
+    height: 60px;
 }
 
+.second-line-contact ul li svg {
+    width: 13px;
+    height: 13px;
+    background: transparent;
+    stroke-width: 0.5;
+}
 
+.contact-page .close-button {
+    position: absolute;
+    top: 1.1rem;
+    right: 1rem;
+    /* padding: 10px; */
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    font-family: Arial;
+    color: #000000;
+    cursor: pointer;
+    font-size: 0.83em;
+}
 
+.contact-page.open .close-button {
+    display: block;
+}
+
+.contact-page .close-button:hover {
+    opacity: 0.7;
+}

@@ -28,6 +28,14 @@
    .first-line h3 {
     font-size: 18px
    }
+
+   .first-line h3 svg {
+    /* Estilo para el ícono */
+    width: 16px;  /* o el tamaño que prefieras */
+    height: 16px;
+    margin-left: 4px;
+    vertical-align: top;
+}
    
    .second-line {
     width: 100%;
