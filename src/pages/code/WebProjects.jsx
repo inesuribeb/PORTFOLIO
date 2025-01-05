@@ -34,15 +34,20 @@ function WebProjects() {
       description: "SWIPE AGENCY is a fashion representation agency based in Bilbao. Its brands combine design and tradition.",
       method: "React • JavaScript • CSS3",
       link: "www.wwwmagazine.com",
-      images: [{ src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/FD66/F92E/79C5/D07A/0A28/100B/4C14/rectangle_yellow_flag.jpg", alt: "descripción1" },
-      // { src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/F886/BB3A/522C/CB5B/0A28/100A/2578/blue_rectangle.jpg", alt: "descripción2" },
-      { src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/FD66/F92E/79C5/D07A/0A28/100B/4C14/rectangle_yellow_flag.jpg", alt: "descripción2" },
-
-      { src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/FD66/F92E/79C5/D07A/0A28/100B/4C14/rectangle_yellow_flag.jpg", alt: "descripción2" },
-      { src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/FD66/F92E/79C5/D07A/0A28/100B/4C14/rectangle_yellow_flag.jpg", alt: "descripción2" },
-      { src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/FD66/F92E/79C5/D07A/0A28/100B/4C14/rectangle_yellow_flag.jpg", alt: "descripción2" },
-      { src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/FD66/F92E/79C5/D07A/0A28/100B/4C14/rectangle_yellow_flag.jpg", alt: "descripción2" },
-      { src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/FD66/F92E/79C5/D07A/0A28/100B/4C14/rectangle_yellow_flag.jpg", alt: "descripción2" },]
+      images: [
+      { src: "https://i.ibb.co/2ZN5PWg/Captura-de-Pantalla-2025-01-05-a-las-14-37-55.png", alt: "descripción1" },
+      { src: "https://i.ibb.co/YRML59W/IMG-6452.jpg", alt: "descripción2" },
+      { src: "https://i.ibb.co/wYrqG72/Captura-de-Pantalla-2025-01-05-a-las-14-38-04.png", alt: "descripción2" },
+      { src: "https://i.ibb.co/k9WJ2m4/IMG-6455.jpg", alt: "descripción2" },
+      { src: "https://i.ibb.co/FYD5818/Captura-de-Pantalla-2025-01-05-a-las-14-38-13.png", alt: "descripción2" },
+      // { src: "", alt: "descripción2" },
+      { src: "https://i.ibb.co/HnbQfMF/Captura-de-Pantalla-2025-01-05-a-las-14-38-53.png", alt: "descripción2" },
+      // { src: "", alt: "descripción2" },
+      { src: "https://i.ibb.co/B6YTXBy/Captura-de-Pantalla-2025-01-05-a-las-14-39-26.png", alt: "descripción2" },
+      // { src: "", alt: "descripción2" },
+      { src: "https://i.ibb.co/y4PbtNS/Captura-de-Pantalla-2025-01-05-a-las-14-39-04.png", alt: "descripción2" },
+      // { src: "", alt: "descripción2" },
+    ]
     },
     {
       title: "MACHIMBAG",
