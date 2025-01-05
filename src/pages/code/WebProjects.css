@@ -7,10 +7,10 @@
 }
 
 .web-section {
-    margin-bottom: 20px;
+    margin-bottom: 80px;
     transition: margin-bottom 0.5s ease;
 }
 
 .web-section.active {
-    margin-bottom: 180px;
+    margin-bottom: 200px;
 }
