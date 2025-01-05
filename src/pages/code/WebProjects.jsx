@@ -49,13 +49,14 @@ function WebProjects() {
       description: "MACHIMBA is an online store offering unique, limited-edition bags designed and crafted by Rocío Machimbarrena.",
       method: "Node.js • MySQL • JavaScript • Pug • CSS3",
       link: "www.wwwmagazine.com",
-      images: [{ src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/FD66/F92E/79C5/D07A/0A28/100B/4C14/rectangle_yellow_flag.jpg", alt: "descripción1" },
-      { src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/FD66/F92E/79C5/D07A/0A28/100B/4C14/rectangle_yellow_flag.jpg", alt: "descripción2" },
-      { src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/FD66/F92E/79C5/D07A/0A28/100B/4C14/rectangle_yellow_flag.jpg", alt: "descripción2" },
-      { src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/FD66/F92E/79C5/D07A/0A28/100B/4C14/rectangle_yellow_flag.jpg", alt: "descripción2" },
-      { src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/FD66/F92E/79C5/D07A/0A28/100B/4C14/rectangle_yellow_flag.jpg", alt: "descripción2" },
-      { src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/FD66/F92E/79C5/D07A/0A28/100B/4C14/rectangle_yellow_flag.jpg", alt: "descripción2" },
-      { src: "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53F0/FD66/F92E/79C5/D07A/0A28/100B/4C14/rectangle_yellow_flag.jpg", alt: "descripción2" },]
+      images: [{ src: "https://i.ibb.co/BP1v1BX/Captura-de-Pantalla-2025-01-05-a-las-10-44-45.png", alt: "descripción1" },
+      { src: "https://i.ibb.co/dcWB4nJ/Captura-de-Pantalla-2025-01-05-a-las-10-45-23.png", alt: "descripción2" },
+      { src: "https://i.ibb.co/vZ4W5YX/WEB-ABOUT-DIOSA.png", alt: "descripción2" },
+      { src: "https://i.ibb.co/dGzsKvK/Captura-de-Pantalla-2025-01-05-a-las-10-50-18.png", alt: "descripción2" },
+      { src: "https://i.ibb.co/x7yz2MH/Captura-de-Pantalla-2025-01-05-a-las-10-48-48.png", alt: "descripción2" },
+      { src: "https://i.ibb.co/M9J7B6T/Captura-de-Pantalla-2025-01-05-a-las-13-20-12.png", alt: "descripción2" },
+      { src: "https://i.ibb.co/MSRCwG1/Captura-de-Pantalla-2025-01-05-a-las-10-51-16.png", alt: "descripción2" },
+      { src: "https://i.ibb.co/CvY7hck/Captura-de-Pantalla-2025-01-05-a-las-13-26-42.png", alt: "descripción2" },]
     },
     {
       title: "The Bike Country",
