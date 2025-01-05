@@ -46,6 +46,7 @@ function WebProjects() {
     },
     {
       title: "MACHIMBAG",
+      web: "https://machimba.inesuribe.es/home",
       description: "MACHIMBA is an online store offering unique, limited-edition bags designed and crafted by Rocío Machimbarrena.",
       method: "Node.js • MySQL • JavaScript • Pug • CSS3",
       link: "www.wwwmagazine.com",
@@ -73,6 +74,7 @@ function WebProjects() {
     },
     {
       title: "KHROMA",
+      web: "https://khroma.inesuribe.es/",
       description: "Khroma is a project that allows users to explore and generate custom color schemes.",
       method: "JavaScript • API REST • CSS3",
       link: "www.wwwmagazine.com",
