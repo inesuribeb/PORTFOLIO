@@ -1,4 +1,4 @@
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import Header from './components/header/Header';
 import React, { useState, useEffect } from 'react';
 import Contact from './pages/contact/Contact';
