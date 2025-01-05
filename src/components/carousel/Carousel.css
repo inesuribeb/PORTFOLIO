@@ -1,33 +1,37 @@
 @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-   }
+    0% { 
+        transform: translateX(0); 
+    }
+    100% { 
+        transform: translateX(-50%); /* Movemos solo hasta la mitad, donde empieza la copia */
+    }
+}
 
 .carousel {
-    height: 280px;
+    height: 300px;
     width: 100%;
-    /* overflow-x: auto; */
+    overflow-x: hidden;
     overflow-y: hidden;
     white-space: nowrap;
-    gap:10px;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    width: max-content;
+    height: 100%;
+    animation: scroll 30s linear infinite;
+}
+
+.carousel-track:hover {
+    animation-play-state: paused; 
+}
+
+.carousel-track > img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    margin-right: 10px;
 }
 
 
-/* .carousel > * {
-    height: 100%;
-    width: auto;
-    display: inline-block;
-    animation: scroll 50s linear infinite;
- } */
-
- .carousel > img {
-    /* padding: 10px; */
-    object-fit: cover;
-    
-    height: 100%;
-    width: auto;
-    display: inline-block;
-    animation: scroll 5s linear infinite;
-
-    margin-right: 10px;
- }

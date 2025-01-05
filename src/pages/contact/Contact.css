@@ -132,7 +132,7 @@
         saturate(100%)    /* primero negro */
         invert(49%)                      /* basado en lightness */
         sepia(75%)                       /* añade el tono rojo */
-        hue-rotate(315deg)               /* ajusta a 1deg (360-39) */
+        hue-rotate(310deg)               /* ajusta a 1deg (360-39) */
         saturate(565%)                   /* aumenta saturación al 70% */
         brightness(77%)  
 }
