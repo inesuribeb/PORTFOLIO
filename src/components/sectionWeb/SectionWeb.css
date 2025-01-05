@@ -28,6 +28,12 @@
     font-size: 12px;
 }
 
+.first-line .description {
+    max-width: 600px;
+    /* text-wrap: balance; */
+    line-height: 1.2;
+}
+
 .first-line h3 {
     font-size: 20px;
     letter-spacing: 1.1px;

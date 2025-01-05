@@ -13,7 +13,7 @@ function SectionWeb({ title, web, description, method, link, images, className }
                         # {title} <ArrowOutwardIcon />
                     </a>
                 </h3>
-                <p>{description}</p>
+                <p className="description">{description}</p>
                 <p>{method}</p>
                 {/* <p><GitHubIcon />{link}</p> */}
                 <p>
