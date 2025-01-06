@@ -16,3 +16,22 @@
 }
 
 
+
+.categories {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .categories span {
+    cursor: pointer;
+  }
+  
+  /* .categories span.active {
+    font-weight: bold;
+  } */
+  
+  /* .separator {
+    cursor: default;
+  } */
