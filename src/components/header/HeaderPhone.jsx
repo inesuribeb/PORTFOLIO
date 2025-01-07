@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 import './HeaderPhone.css'
 
-function HeaderPhone() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+function HeaderPhone({ isMenuOpen, setIsMenuOpen }) {
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <>

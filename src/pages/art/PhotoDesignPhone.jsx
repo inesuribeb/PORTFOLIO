@@ -1,10 +1,18 @@
 import React, { useState } from 'react';
 import Modal from './Modal';
+import { useOutletContext } from 'react-router-dom';
+
 import './PhotoDesignPhone.css'
 
 function PhotoDesignPhone() {
+
   const [selectedImage, setSelectedImage] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const context = useOutletContext();
+  // const setIsMenuOpen = context?.setIsMenuOpen;
+  const { isMenuOpen, setIsMenuOpen } = useOutletContext();
+
+
 
   const column1Images = [
     { src: "/CAPTURAS/1.png", alt: "imagen de un niño", category: "Photography", order: 1 },
@@ -50,8 +58,12 @@ function PhotoDesignPhone() {
   const rightColumnImages = allImages.filter((_, index) => index % 2 === 1);
 
   const handleImageClick = (image) => {
-    setSelectedImage(image);
-    setIsModalOpen(true);
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+    } else {
+      setSelectedImage(image);
+      setIsModalOpen(true);
+    }
   };
 
   const handleNextImage = () => {
@@ -66,8 +78,11 @@ function PhotoDesignPhone() {
     setSelectedImage(previousImage);
   };
 
-    return (
-      <div className='photo-design-phone'>
+  return (
+    <div className='photo-design-phone' onClick={(e) => {
+      e.stopPropagation();
+      setIsMenuOpen(false);
+    }}>
       <div className='photo-grid-phone'>
         <div className='photo-column-phone'>
           {leftColumnImages.map((image) => (
@@ -102,8 +117,8 @@ function PhotoDesignPhone() {
       />
     </div>
   );
-  }
+}
 
 
-  
-  export default PhotoDesignPhone;
+
+export default PhotoDesignPhone;

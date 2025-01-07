@@ -48,6 +48,7 @@ const router = createBrowserRouter([
       {
         path: 'art',
         element: <ResponsiveComponent 
+          // MobileVersion={PhotoDesignPhone} 
           MobileVersion={PhotoDesignPhone} 
           DesktopVersion={PhotoDesign} 
         />

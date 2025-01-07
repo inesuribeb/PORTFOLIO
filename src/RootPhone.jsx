@@ -1,14 +1,21 @@
 import { Outlet } from 'react-router-dom';
 import HeaderPhone from './components/header/HeaderPhone';
+import { useState } from 'react';
 import './RootPhone.css'
 
 function RootPhone() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <>
-      <HeaderPhone />
+      {/* <HeaderPhone isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <div className="root-phone__content">
-        <Outlet />
-      </div>
+        <Outlet context={{ setIsMenuOpen }} />
+      </div> */}
+      <HeaderPhone isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+    <div className="root-phone__content">
+      <Outlet context={{ isMenuOpen, setIsMenuOpen }} />
+    </div>
     </>
   );
 }
