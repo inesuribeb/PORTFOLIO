@@ -84,3 +84,43 @@
 .close-button:hover {
   opacity: 0.8;
 }
+
+/* Media query para móvil */
+@media (max-width: 767px) {
+  .modal-content {
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    background-color: transparent;
+
+  }
+
+  .modal-content .image-wrapper::before {
+    top: -15px;
+    right: -15px;
+    bottom: -15px;
+    left: -15px;
+    border-radius: 25px;
+
+  }
+
+  .modal-content .image-wrapper img {
+    max-height: calc(100vh - 100px);
+  }
+
+  .nav-button {
+    width: 30px;
+    height: 30px;
+    top: auto;
+    bottom: 30px;
+    transform: none;
+  }
+
+  .nav-button.prev {
+    left: 30px;
+  }
+
+  .nav-button.next {
+    right: 30px;
+  }
+}
