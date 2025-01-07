@@ -33,7 +33,7 @@ function WebProjects() {
   const projectsData = [
     {
       title: "SWIPE AGENCY",
-      description: "SWIPE AGENCY is a fashion representation agency based in Bilbao. Its brands combine design and tradition.",
+      description: "SWIPE AGENCY is a fashion representation agency based in Bilbao. Its brands combine design and tradition. The platform is a React-based digital catalog with responsive design, exclusive layouts for desktop and mobile, and dynamic navigation.",
       category: "Front-end",
       method: "React • JavaScript • CSS3",
       link: "https://github.com/inesuribeb/Swipe-Agency",
@@ -56,7 +56,7 @@ function WebProjects() {
     {
       title: "MACHIMBAG",
       web: "https://machimba.inesuribe.es/home",
-      description: "MACHIMBA is an online store offering unique, limited-edition bags designed and crafted by Rocío Machimbarrena. Developed in collaboration with Samuel Correia and Ekaitz Guerra.",
+      description: "MACHIMBA is an e-commerce platform offering unique, limited-edition bags designed and crafted by Rocío Machimbarrena. It combines elegant design with a seamless shopping experience. Developed in collaboration with Samuel Correia and Ekaitz Guerra.",
       category: "Full-stack",
       method: "Node.js • MySQL • JavaScript • Pug • CSS3",
       link: "https://github.com/inesuribeb/Machimba",
@@ -73,7 +73,7 @@ function WebProjects() {
     },
     {
       title: "The Bike Country",
-      description: "TBC is a premium tourism company specialized in cycling in the Basque Country (Euskadi). Developed in collaboration with Yeray Moreno and Estefania Mendes.",
+      description: "TBC is a premium tourism company specialized in cycling in the Basque Country (Euskadi). Its e-commerce platform enables users to explore packages, book experiences, and manage their journeys seamlessly. Developed in collaboration with Yeray Moreno and Estefania Mendes.",
       category: "Full-stack",
       method: "MySQL • React • CSS3 • JavaScript",
       link: "https://github.com/inesuribeb/The-Bike_Country-Frontend-2-",
@@ -89,7 +89,7 @@ function WebProjects() {
     {
       title: "KHROMA",
       web: "https://khroma.inesuribe.es/",
-      description: "Khroma is a project that allows users to explore and generate custom color schemes.",
+      description: "KHROMA is a project that allows users to explore and generate custom color schemes, identify and convert colors, and create versatile palettes for various applications.",
       category: "Front-end",
       method: "JavaScript • API REST • CSS3",
       link: "https://github.com/inesuribeb/Khroma",
@@ -108,7 +108,7 @@ function WebProjects() {
     {
       title: "BYTE BITES",
       web: "https://byte-bites.inesuribe.es/",
-      description: "Byte Bites is a web platform designed to make exploring and discovering recipes easier. Developed in collaboration with Jon Latxiondo.",
+      description: "BYTE BITES is a web platform designed to make exploring and discovering recipes easier, offering users personalized searches, recommendations, and query-based searches. Developed in collaboration with Jon Latxiondo.",
       category: "Front-end",
       method: "JavaScript • API REST • CSS3",
       link: "https://github.com/inesuribeb/Byte-Bites",
