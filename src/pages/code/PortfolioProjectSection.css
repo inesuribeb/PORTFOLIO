@@ -1,0 +1,16 @@
+/* .webproject-container-mobile {
+    margin-top: 100px;
+    padding: 0px;
+}
+.web-projects-mobile {
+    transition: margin-bottom 0.5s ease;
+} */
+
+.web-section-mobile {
+    margin-bottom: 80px;
+    /* transition: margin-bottom 0.5s ease; */
+}
+
+/* .web-section-mobile.active {
+    margin-bottom: 200px;
+} */
