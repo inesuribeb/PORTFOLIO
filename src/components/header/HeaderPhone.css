@@ -18,10 +18,11 @@
 
 
 .header-phone__title {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
     font-family: 'Pragmatica';
+    letter-spacing: 1.4px;
 }
 
 .mobile-menu {
@@ -47,6 +48,8 @@
     font-family: 'Pragmatica';
     opacity: 0;
     animation: fadeIn 0.4s ease-in-out 0.4s forwards;
+
+    padding-right: 30px;
 }
 
 @keyframes fadeIn {
@@ -66,11 +69,26 @@
     color: inherit;
     font-family: 'Pragmatica';
     font-weight: bold;
+
+    justify-content: space-between; 
+    width:100%
+}
+
+.mobile-menu__link span:last-child {
+    margin-left: auto; /* Empuja la flecha hacia la derecha */
 }
 
 .mobile-menu__link:hover {
     opacity: 0.7;
 }
+
+.arrow-icon svg{
+    color: grey;
+    width: 18px;
+    height: 18px;
+    vertical-align: bottom;
+}
+
 
 
 
@@ -133,4 +151,27 @@
 
 .hamburger-button.active .hamburger-line.bottom {
     transform: rotate(-45deg);
+}
+
+
+
+.submenu-header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.submenu-header button {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    color: inherit;
+    display: flex;
+    align-items: center;
+}
+
+/* Opcional: si quieres dar un poco de espacio al ícono */
+.submenu-header svg {
+    margin-right: 30px;
 }

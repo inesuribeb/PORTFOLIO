@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
-import ShowWebProjects from '../../components/showWebProjects/ShowWebProjects'
+import ShowWebProjects from '../../components/showWebProjects/ShowWebProjects';
+import { useOutletContext } from 'react-router-dom';
+
 import './PortfolioProjectSection.css'
 
 
@@ -8,6 +10,7 @@ function PortfolioProjectSection() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState('All');
 
+  const { isMenuOpen, setIsMenuOpen } = useOutletContext();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -95,10 +98,8 @@ function PortfolioProjectSection() {
       link: "https://github.com/inesuribeb/Khroma",
       images: [
         { src: "https://i.ibb.co/RSYwyM7/Captura-de-Pantalla-2025-01-05-a-las-11-06-58.png", alt: "descripción1" },
-        // { src: "https://i.ibb.co/kmC40Ng/Captura-de-Pantalla-2025-01-05-a-las-11-04-03.png", alt: "descripción2" },
         { src: "https://i.ibb.co/B2s3VkS/Captura-de-Pantalla-2025-01-05-a-las-11-08-21.png", alt: "descripción2" },
         { src: "https://i.ibb.co/4tL0LJD/Captura-de-Pantalla-2025-01-05-a-las-11-14-22.png", alt: "descripción2" },
-        // { src: "https://i.ibb.co/0ZrjwD3/Captura-de-Pantalla-2025-01-05-a-las-11-13-29.png", alt: "descripción2" },
         { src: "https://i.ibb.co/LrXqhMw/Captura-de-Pantalla-2025-01-05-a-las-11-15-42.png", alt: "descripción2" },
         { src: "https://i.ibb.co/wKMp1W6/Captura-de-Pantalla-2025-01-05-a-las-11-14-48.png", alt: "descripción2" },
         { src: "https://i.ibb.co/FWd9xzw/Captura-de-Pantalla-2025-01-05-a-las-16-55-00.png", alt: "descripción2" },
@@ -127,32 +128,10 @@ function PortfolioProjectSection() {
     : projectsData.filter(project => project.category === selectedCategory);
 
   return (
-    <div className="webproject-container-mobile">
-      {/* <div className="categories">
-        <span
-          className={selectedCategory === 'All' ? 'active' : ''}
-          onClick={() => setSelectedCategory('All')}
-        >
-          All
-        </span>
-        <span className="separator">, </span>
-        <span
-          className={selectedCategory === 'Front-end' ? 'active' : ''}
-          onClick={() => setSelectedCategory('Front-end')}
-        >
-          Front-end
-        </span>
-        <span className="separator">, </span>
-        <span
-          className={selectedCategory === 'Full-stack' ? 'active' : ''}
-          onClick={() => setSelectedCategory('Full-stack')}
-        >
-          Full-stack
-        </span>
-      </div> */}
-
-
-
+    <div className="webproject-container-mobile" onClick={(e) => {
+      e.stopPropagation();
+      setIsMenuOpen(false);
+    }}>
       <div className="web-projects-mobile" style={{ marginBottom: `${marginBottom}px` }}>
         {filteredProjects.map((project, index) => (
           <ShowWebProjects
@@ -167,5 +146,5 @@ function PortfolioProjectSection() {
 }
 
 
-  
-  export default PortfolioProjectSection;
+
+export default PortfolioProjectSection;

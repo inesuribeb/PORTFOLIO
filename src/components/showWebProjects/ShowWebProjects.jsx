@@ -21,11 +21,10 @@ function ShowWebProjects({ className, title, description, method, web, link, ima
                         # {title} <ArrowOutwardIcon />
                     </a>
                 </h3>
-                {/* <p className="description">{description}</p> */}
-                {/* <p>{method}</p> */}
+
                 <p>
-                    <a href={link} target="_blank" rel="noopener noreferrer">
-                        <GitHubIcon />
+                    <a href={link} target="_blank" rel="noopener noreferrer" className='github-icon'>
+                        See on <GitHubIcon />
                     </a>
                 </p>
             </div>

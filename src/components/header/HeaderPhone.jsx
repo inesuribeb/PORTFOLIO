@@ -1,19 +1,54 @@
-import React, { useState } from 'react';
-// import { Menu, X } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import './HeaderPhone.css'
 
 function HeaderPhone({ isMenuOpen, setIsMenuOpen }) {
-  // const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleOverlayClick = (e) => {
+    if (e.target.classList.contains('mobile-menu')) {
+      e.stopPropagation();
+      setIsMenuOpen(false);
+    }
+  };
+
+  const handleMenuClick = (e) => {
+    e.stopPropagation();
+    if (isMenuOpen) {
+      setShowArtSubmenu(false);
+      setShowCodeSubmenu(false);
+    }
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const [showArtSubmenu, setShowArtSubmenu] = useState(false);
+  const [showCodeSubmenu, setShowCodeSubmenu] = useState(false);
+
+  useEffect(() => {
+    if (!isMenuOpen) {
+      setShowArtSubmenu(false);
+      setShowCodeSubmenu(false);
+    }
+  }, [isMenuOpen]);
+
+  const handleArtClick = (e) => {
+    e.preventDefault();
+    setShowArtSubmenu(true);
+  };
+
+  const handleCodeClick = (e) => {
+    e.preventDefault();
+    setShowCodeSubmenu(true);
+  };
 
   return (
     <>
       <header className="header-phone">
-      
         <div className="header-phone__container">
+
           <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={handleMenuClick}
             className={`hamburger-button ${isMenuOpen ? 'active' : ''}`}
           >
             <span className="hamburger-line top"></span>
@@ -27,21 +62,142 @@ function HeaderPhone({ isMenuOpen, setIsMenuOpen }) {
             </div>
           )}
         </div>
-
-
       </header>
 
       {isMenuOpen && (
-        <div className="mobile-menu">
-          <nav className="mobile-menu__nav">
-            <Link to="/art" className="mobile-menu__link" onClick={() => setIsMenuOpen(false)}>
+        <div className="mobile-menu" onClick={handleOverlayClick}>
+          <nav className="mobile-menu__nav" onClick={e => e.stopPropagation()}>
+            <Link
+              to="#"
+              className="mobile-menu__link"
+              onClick={handleArtClick}
+            >
               <span>Art</span>
+              <span className="arrow-icon"><KeyboardArrowRightIcon /></span>
             </Link>
-            <Link to="/code" className="mobile-menu__link" onClick={() => setIsMenuOpen(false)}>
+            <Link
+              to="#"
+              className="mobile-menu__link"
+              onClick={handleCodeClick}
+            >
               <span>Code</span>
+              <span className="arrow-icon"><KeyboardArrowRightIcon /></span>
             </Link>
-            <Link to="/contact" className="mobile-menu__link" onClick={() => setIsMenuOpen(false)}>
+
+            <Link
+              to="/contact"
+              className="mobile-menu__link"
+              onClick={() => {
+                setIsMenuOpen(false);
+                window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth'
+                });
+              }}
+            >
               <span>Contact</span>
+              <span className="arrow-icon"><KeyboardArrowRightIcon /></span>
+            </Link>
+          </nav>
+        </div>
+      )}
+      {isMenuOpen && showArtSubmenu && (
+        <div className="mobile-menu submenu">
+          <nav className="mobile-menu__nav" onClick={e => e.stopPropagation()}>
+            <div className="submenu-header">
+              <button onClick={() => setShowArtSubmenu(false)}>
+                <KeyboardArrowLeftIcon />
+              </button>
+            </div>
+            <Link
+              to="/art?category=all"
+              className="mobile-menu__link"
+              onClick={() => {
+                setIsMenuOpen(false);
+                window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth'
+                });
+              }}
+            >
+              <span>All</span>
+            </Link>
+            <Link
+              to="/art?category=photography"
+              className="mobile-menu__link"
+              onClick={() => {
+                setIsMenuOpen(false);
+                window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth'
+                });
+              }}
+            >
+              <span>Photography</span>
+            </Link>
+            <Link
+              to="/art?category=design"
+              className="mobile-menu__link"
+              onClick={() => {
+                setIsMenuOpen(false);
+                window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth'
+                });
+              }}
+            >
+              <span>Design</span>
+            </Link>
+          </nav>
+        </div>
+      )}
+
+      {isMenuOpen && showCodeSubmenu && (
+        <div className="mobile-menu submenu">
+          <nav className="mobile-menu__nav" onClick={e => e.stopPropagation()}>
+            <div className="submenu-header">
+              <button onClick={() => setShowCodeSubmenu(false)}>
+                <KeyboardArrowLeftIcon />
+              </button>
+            </div>
+            <Link
+              to="/code?category=all"
+              className="mobile-menu__link"
+              onClick={() => {
+                setIsMenuOpen(false);
+                window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth'
+                });
+              }}
+            >
+              <span>All</span>
+            </Link>
+            <Link
+              to="/code?category=frontend"
+              className="mobile-menu__link"
+              onClick={() => {
+                setIsMenuOpen(false);
+                window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth'
+                });
+              }}
+            >
+              <span>Front-End</span>
+            </Link>
+            <Link
+              to="/code?category=fullstack"
+              className="mobile-menu__link"
+              onClick={() => {
+                setIsMenuOpen(false);
+                window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth'
+                });
+              }}
+            >
+              <span>Full-Stack</span>
             </Link>
           </nav>
         </div>
