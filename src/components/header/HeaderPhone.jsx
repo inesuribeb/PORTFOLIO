@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import './HeaderPhone.css'
 
 function HeaderPhone({ isMenuOpen, setIsMenuOpen }) {
+
+  const [searchParams, setSearchParams] = useSearchParams();
 
   const handleOverlayClick = (e) => {
     if (e.target.classList.contains('mobile-menu')) {
@@ -104,7 +107,7 @@ function HeaderPhone({ isMenuOpen, setIsMenuOpen }) {
       {isMenuOpen && showArtSubmenu && (
         <div className="mobile-menu submenu">
           <nav className="mobile-menu__nav" onClick={e => e.stopPropagation()}>
-            <div className="submenu-header">
+            <div className="arrow-icon">
               <button onClick={() => setShowArtSubmenu(false)}>
                 <KeyboardArrowLeftIcon />
               </button>
@@ -113,6 +116,7 @@ function HeaderPhone({ isMenuOpen, setIsMenuOpen }) {
               to="/art?category=all"
               className="mobile-menu__link"
               onClick={() => {
+                setSearchParams({ category: 'all' });
                 setIsMenuOpen(false);
                 window.scrollTo({
                   top: 0,
@@ -126,6 +130,7 @@ function HeaderPhone({ isMenuOpen, setIsMenuOpen }) {
               to="/art?category=photography"
               className="mobile-menu__link"
               onClick={() => {
+                setSearchParams({ category: 'Photography' });
                 setIsMenuOpen(false);
                 window.scrollTo({
                   top: 0,
@@ -139,6 +144,7 @@ function HeaderPhone({ isMenuOpen, setIsMenuOpen }) {
               to="/art?category=design"
               className="mobile-menu__link"
               onClick={() => {
+                setSearchParams({ category: 'Design' });
                 setIsMenuOpen(false);
                 window.scrollTo({
                   top: 0,
@@ -155,7 +161,7 @@ function HeaderPhone({ isMenuOpen, setIsMenuOpen }) {
       {isMenuOpen && showCodeSubmenu && (
         <div className="mobile-menu submenu">
           <nav className="mobile-menu__nav" onClick={e => e.stopPropagation()}>
-            <div className="submenu-header">
+            <div className="arrow-icon">
               <button onClick={() => setShowCodeSubmenu(false)}>
                 <KeyboardArrowLeftIcon />
               </button>
@@ -163,7 +169,15 @@ function HeaderPhone({ isMenuOpen, setIsMenuOpen }) {
             <Link
               to="/code?category=all"
               className="mobile-menu__link"
+              // onClick={() => {
+              //   setIsMenuOpen(false);
+              //   window.scrollTo({
+              //     top: 0,
+              //     behavior: 'smooth'
+              //   });
+              // }}
               onClick={() => {
+                setSearchParams({ category: 'all' });
                 setIsMenuOpen(false);
                 window.scrollTo({
                   top: 0,
@@ -176,7 +190,15 @@ function HeaderPhone({ isMenuOpen, setIsMenuOpen }) {
             <Link
               to="/code?category=frontend"
               className="mobile-menu__link"
+              // onClick={() => {
+              //   setIsMenuOpen(false);
+              //   window.scrollTo({
+              //     top: 0,
+              //     behavior: 'smooth'
+              //   });
+              // }}
               onClick={() => {
+                setSearchParams({ category: 'front-end' });
                 setIsMenuOpen(false);
                 window.scrollTo({
                   top: 0,
@@ -189,7 +211,15 @@ function HeaderPhone({ isMenuOpen, setIsMenuOpen }) {
             <Link
               to="/code?category=fullstack"
               className="mobile-menu__link"
+              // onClick={() => {
+              //   setIsMenuOpen(false);
+              //   window.scrollTo({
+              //     top: 0,
+              //     behavior: 'smooth'
+              //   });
+              // }}
               onClick={() => {
+                setSearchParams({ category: 'full-stack' });
                 setIsMenuOpen(false);
                 window.scrollTo({
                   top: 0,

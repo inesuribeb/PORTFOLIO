@@ -89,6 +89,14 @@
     vertical-align: bottom;
 }
 
+.arrow-icon button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
 
 
 
@@ -155,16 +163,26 @@
 
 
 
-.submenu-header {
+
+.mobile-menu submenu {
+    position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
+    height: 84px;
+    padding: 0 16px;
+}
+
+.submenu-header {
+    display: flex;
+    /* align-items: center; */
     padding-bottom: 20px;
 }
 
 .submenu-header button {
     background: none;
     border: none;
-    padding: 10px;
+    /* padding: 10px; */
     cursor: pointer;
     color: inherit;
     display: flex;
@@ -172,6 +190,6 @@
 }
 
 /* Opcional: si quieres dar un poco de espacio al ícono */
-.submenu-header svg {
-    margin-right: 30px;
-}
+
+
+

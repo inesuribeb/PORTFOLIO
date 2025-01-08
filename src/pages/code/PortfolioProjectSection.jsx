@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import ShowWebProjects from '../../components/showWebProjects/ShowWebProjects';
+import { useSearchParams } from 'react-router-dom';
 import { useOutletContext } from 'react-router-dom';
 
 import './PortfolioProjectSection.css'
@@ -11,6 +12,7 @@ function PortfolioProjectSection() {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const { isMenuOpen, setIsMenuOpen } = useOutletContext();
+  const [searchParams] = useSearchParams();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,13 +33,21 @@ function PortfolioProjectSection() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+
+  useEffect(() => {
+    const category = searchParams.get('category');
+    if (category) {
+      setSelectedCategory(category);
+    }
+  }, [searchParams]);
+
   const marginBottom = Math.max(80 - (scrollPosition * 0.1), 10);
 
   const projectsData = [
     {
       title: "SWIPE AGENCY",
       description: "SWIPE AGENCY is a fashion representation agency based in Bilbao. Its brands combine design and tradition. The platform is a React-based digital catalog with responsive design, exclusive layouts for desktop and mobile, and dynamic navigation.",
-      category: "Front-end",
+      category: "frontend",
       method: "React • JavaScript • CSS3",
       link: "https://github.com/inesuribeb/Swipe-Agency",
       images: [
@@ -60,7 +70,7 @@ function PortfolioProjectSection() {
       title: "MACHIMBAG",
       web: "https://machimba.inesuribe.es/home",
       description: "MACHIMBA is an e-commerce platform offering unique, limited-edition bags designed and crafted by Rocío Machimbarrena. It combines elegant design with a seamless shopping experience. Developed in collaboration with Samuel Correia and Ekaitz Guerra.",
-      category: "Full-stack",
+      category: "fullstack",
       method: "Node.js • MySQL • JavaScript • Pug • CSS3",
       link: "https://github.com/inesuribeb/Machimba",
       images: [
@@ -77,7 +87,7 @@ function PortfolioProjectSection() {
     {
       title: "The Bike Country",
       description: "TBC is a premium tourism company specialized in cycling in the Basque Country (Euskadi). Its e-commerce platform enables users to explore packages, book experiences, and manage their journeys seamlessly. Developed in collaboration with Yeray Moreno and Estefania Mendes.",
-      category: "Full-stack",
+      category: "fullstack",
       method: "MySQL • React • CSS3 • JavaScript",
       link: "https://github.com/inesuribeb/The-Bike_Country-Frontend-2-",
       images: [
@@ -93,7 +103,7 @@ function PortfolioProjectSection() {
       title: "KHROMA",
       web: "https://khroma.inesuribe.es/",
       description: "KHROMA is a project that allows users to explore and generate custom color schemes, identify and convert colors, and create versatile palettes for various applications.",
-      category: "Front-end",
+      category: "frontend",
       method: "JavaScript • API REST • CSS3",
       link: "https://github.com/inesuribeb/Khroma",
       images: [
@@ -110,7 +120,7 @@ function PortfolioProjectSection() {
       title: "BYTE BITES",
       web: "https://byte-bites.inesuribe.es/",
       description: "BYTE BITES is a web platform designed to make exploring and discovering recipes easier, offering users personalized searches, recommendations, and query-based searches. Developed in collaboration with Jon Latxiondo.",
-      category: "Front-end",
+      category: "frontend",
       method: "JavaScript • API REST • CSS3",
       link: "https://github.com/inesuribeb/Byte-Bites",
       images: [
@@ -123,9 +133,11 @@ function PortfolioProjectSection() {
     },
   ];
 
-  const filteredProjects = selectedCategory === 'All'
-    ? projectsData
-    : projectsData.filter(project => project.category === selectedCategory);
+  const filteredProjects = selectedCategory.toLowerCase() === 'all'
+  ? projectsData
+  : projectsData.filter(project => 
+      project.category.toLowerCase() === selectedCategory.toLowerCase()
+    );
 
   return (
     <div className="webproject-container-mobile" onClick={(e) => {

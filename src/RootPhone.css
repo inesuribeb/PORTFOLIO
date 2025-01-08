@@ -2,7 +2,10 @@
     margin-top: 100px; /* Este valor debe coincidir con la altura de tu HeaderPhone */
   }
 
+  .main-content {
+    transition: transform 0.3s ease-out;
+}
 
-
-
-  
+.main-content.shifted {
+    transform: translateY(100vh);
+} 

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import Modal from './Modal';
 import { useOutletContext } from 'react-router-dom';
 
@@ -9,10 +10,17 @@ function PhotoDesignPhone() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const context = useOutletContext();
-  // const setIsMenuOpen = context?.setIsMenuOpen;
   const { isMenuOpen, setIsMenuOpen } = useOutletContext();
+  const [searchParams] = useSearchParams();
+  const [selectedCategory, setSelectedCategory] = useState(searchParams.get('category') || 'all');
 
-
+  useEffect(() => {
+    const category = searchParams.get('category');
+  
+    if (category) {
+      setSelectedCategory(category);
+    }
+  }, [searchParams]);
 
   const column1Images = [
     { src: "/CAPTURAS/1.png", alt: "imagen de un niño", category: "Photography", order: 1 },
@@ -54,8 +62,13 @@ function PhotoDesignPhone() {
 
   const allImages = [...column1Images, ...column2Images, ...column3Images];
 
-  const leftColumnImages = allImages.filter((_, index) => index % 2 === 0);
-  const rightColumnImages = allImages.filter((_, index) => index % 2 === 1);
+  const filteredImages = allImages.filter(image => {
+    if (selectedCategory.toLowerCase() === 'all') return true;
+    return image.category.toLowerCase() === selectedCategory.toLowerCase();
+  });
+
+  const leftColumnImages = filteredImages.filter((_, index) => index % 2 === 0);
+  const rightColumnImages = filteredImages.filter((_, index) => index % 2 === 1);
 
   const handleImageClick = (image) => {
     if (isMenuOpen) {
@@ -67,14 +80,14 @@ function PhotoDesignPhone() {
   };
 
   const handleNextImage = () => {
-    const currentIndex = allImages.findIndex(img => img.order === selectedImage.order);
-    const nextImage = allImages[currentIndex + 1] || allImages[0];
+    const currentIndex = filteredImages.findIndex(img => img.order === selectedImage.order);
+    const nextImage = filteredImages[currentIndex + 1] || filteredImages[0];
     setSelectedImage(nextImage);
   };
 
   const handlePreviousImage = () => {
-    const currentIndex = allImages.findIndex(img => img.order === selectedImage.order);
-    const previousImage = allImages[currentIndex - 1] || allImages[allImages.length - 1];
+    const currentIndex = filteredImages.findIndex(img => img.order === selectedImage.order);
+    const previousImage = filteredImages[currentIndex - 1] || filteredImages[allImages.length - 1];
     setSelectedImage(previousImage);
   };
 
