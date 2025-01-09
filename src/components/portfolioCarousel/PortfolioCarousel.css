@@ -8,14 +8,14 @@
 }
 
 .carousel-portfolio-mobile {
-    height: 300px; /* o el alto que prefieras para móvil */
+    height: 300px; 
     width: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
     white-space: nowrap;
     position: relative;
 
-    -webkit-overflow-scrolling: touch; /* Añade esto para mejor soporte móvil */
+    -webkit-overflow-scrolling: touch;
     touch-action: pan-x; 
 }
 
@@ -24,8 +24,7 @@
     width: max-content;
     height: 100%;
     animation: scrollMobile 100s linear infinite;
-    /* animation-play-state: paused; */
-    animation-play-state: running; /* Fuerza la animación para probar */
+    animation-play-state: running; 
     will-change: transform; 
 }
 
@@ -44,10 +43,9 @@
     margin-right: 10px;
 }
 
-/* Asegurarnos de que las imágenes mantienen su aspecto en móvil */
 @media (max-width: 768px) {
     .carousel-portfolio-mobile {
-        height: 250px; /* altura más pequeña para móvil si lo deseas */
+        height: 250px; 
     }
 
     .carousel-track-mobile > img {

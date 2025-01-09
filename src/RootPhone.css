@@ -1,11 +1,17 @@
 .root-phone__content {
-    margin-top: 100px; /* Este valor debe coincidir con la altura de tu HeaderPhone */
-  }
-
-  .main-content {
-    transition: transform 0.3s ease-out;
+  margin-top: 100px;
+  animation: fadeInRoutes 0.5s ease-in forwards;
 }
 
-/* .main-content.shifted {
-    transform: translateY(100vh);
-}  */
+@keyframes fadeInRoutes {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.main-content {
+  transition: transform 0.3s ease-out;
+}

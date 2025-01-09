@@ -118,7 +118,7 @@ function PortfolioProjectSection() {
     },
     {
       title: "BYTE BITES",
-      web: "https://byte-bites.inesuribe.es/",
+      // web: "https://byte-bites.inesuribe.es/",
       description: "BYTE BITES is a web platform designed to make exploring and discovering recipes easier, offering users personalized searches, recommendations, and query-based searches. Developed in collaboration with Jon Latxiondo.",
       category: "frontend",
       method: "JavaScript • API REST • CSS3",

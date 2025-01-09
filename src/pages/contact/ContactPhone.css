@@ -1,27 +1,25 @@
-
 .contact-phone {
     display: flex;
     flex-direction: column;
-    position: fixed; /* Esto fija el contenedor al viewport */
+    position: fixed;
     top: 85px;
     left: 0;
     right: 0;
     bottom: 0;
-    overflow: hidden; /* Previene cualquier scroll */
-    /* padding: 20px; */
+    overflow: hidden;
     background-color: #E4B5C2;
-  }
-  
-  .first-part {
+}
+
+.first-part {
     flex-shrink: 0;
     background-color: #E4B5C2;
-  }
-  
-  .second-part {
+}
+
+.second-part {
     margin-top: auto;
     flex-shrink: 0;
     background-color: #E4B5C2;
-  }
+}
 
 
 .in-and-out {
@@ -40,7 +38,6 @@
 
 .in-and-out ul {
     list-style: none;
-    /* padding: 10px; */
     margin: 0;
     padding: 15px;
     background-color: #E4B5C2;
@@ -59,14 +56,12 @@
     padding: 0;
     padding: 15px;
     background-color: #E4B5C2;
-
 }
 
 .in-and-out.visible {
     max-height: 500px;
     opacity: 1;
     background-color: #E4B5C2;
-
 }
 
 .contact-mini-title {
@@ -122,7 +117,7 @@
     background-color: #E4B5C2;
 }
 
-.contact-presentation p{
+.contact-presentation p {
     background-color: #E4B5C2;
 }
 

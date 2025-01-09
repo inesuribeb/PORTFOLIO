@@ -4,13 +4,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import './ShowWebProjects.css'
 
 function ShowWebProjects({ className, title, description, method, web, link, images }) {
-    // console.log('Rendering ShowWebProjects with:', {
-    //     title,
-    //     className,
-    //     images: images?.length // número de imágenes
-    // });
-
-
 
     return (
         <section className={`web-section-mobile ${className}`}>

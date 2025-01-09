@@ -1,18 +1,10 @@
 .contact-page {
     width: 100%;
     height: 0;
-    /* background-color: #F6E319; */
-    /* background-color: #D8533B; */
-    /* background-color: #4D1512; */
-    /* background-color: #481311; */
-    /* background-color: #220908; */
-    /* background-color: #F4D3D7; */
     background-color: #E4B5C2;
-
     padding: 0;
     transition: all 0.7s ease-out;
     overflow: hidden;
-
     display: grid;
     grid-template-columns: calc(16% - 4rem) calc(16% - 4rem) calc(68% - 4rem);
     gap: 5rem;
@@ -24,9 +16,7 @@
     height: 90vh;
     padding-left: 1rem;
     padding-top: 0rem;
-    /* padding-right: 3rem; */
     box-sizing: border-box;
-
 }
 
 
@@ -40,7 +30,6 @@
     width: 100%;
     background-color: transparent;
     box-sizing: border-box;
-
 }
 
 .first-column-contact h5,
@@ -51,15 +40,7 @@
     font-weight: 800;
     box-sizing: border-box;
     font-size: clamp(0.8rem, 1vw, 1rem);
-    /* color: #E69CA5; */
     color: #D50429;
-
-
-}
-
-@font-face {
-    font-family: 'Erotique';
-    src: url('../fonts/ErotiqueAlternateTrial-Regular.ttf') format('truetype');
 }
 
 .third-column-contact p {
@@ -67,10 +48,8 @@
     font-size: clamp(2rem, 2.25vw, 1.65rem);
     font-family: 'Times New Roman', Times, serif;
     box-sizing: border-box;
-    /* color: #E69CA5; */
     color: #D50429;
     font-family: 'Pragmatica';
-
 }
 
 .third-column-contact p i {
@@ -92,7 +71,6 @@
     font-family: 'Pragmatica';
     font-weight: 800;
     width: 80%;
-    /* color: #E69CA5; */
     color: #D50429;
 }
 
@@ -126,15 +104,13 @@
     top: 0.5rem;
     left: -1.7rem;
     width: 80%;
-    /* filter: brightness(0.9) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%); */
-    /* filter: brightness(0) invert(1) sepia(0.1); */
     filter: brightness(0) 
-        saturate(100%)    /* primero negro */
-        invert(49%)                      /* basado en lightness */
-        sepia(75%)                       /* añade el tono rojo */
-        hue-rotate(310deg)               /* ajusta a 1deg (360-39) */
-        saturate(565%)                   /* aumenta saturación al 70% */
-        brightness(77%)  
+            saturate(100%)    
+            invert(49%)                      
+            sepia(75%)                      
+            hue-rotate(310deg)              
+            saturate(565%)                 
+            brightness(77%)  
 }
 
 .second-line-contact ul li svg {
@@ -148,12 +124,10 @@
     position: absolute;
     top: 1.4rem;
     right: 1rem;
-    /* padding: 10px; */
     background-color: transparent;
     border: none;
     font-size: 30px;
     font-family: 'Pragmatica';
-    /* color: #E69CA5; */
     color: #D50429;
     cursor: pointer;
     font-size: 0.83em;

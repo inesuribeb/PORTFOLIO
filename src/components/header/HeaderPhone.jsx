@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useSearchParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import './HeaderPhone.css'
@@ -25,6 +26,12 @@ function HeaderPhone({ isMenuOpen, setIsMenuOpen, className }) {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const navigate = useNavigate();
+
+  const handleTitleClick = () => {
+    navigate('/'); 
+  };
+
   const [showArtSubmenu, setShowArtSubmenu] = useState(false);
   const [showCodeSubmenu, setShowCodeSubmenu] = useState(false);
 
@@ -47,7 +54,7 @@ function HeaderPhone({ isMenuOpen, setIsMenuOpen, className }) {
 
   return (
     <>
-      <header className={ "header-phone " + className}>
+      <header className={"header-phone " + className}>
         <div className="header-phone__container">
 
           <button
@@ -59,8 +66,17 @@ function HeaderPhone({ isMenuOpen, setIsMenuOpen, className }) {
             <span className="hamburger-line bottom"></span>
           </button>
 
-          {!isMenuOpen && (
+          {/* {!isMenuOpen && (
             <div className="header-phone__title">
+              INES URIBE
+            </div>
+          )} */}
+          {!isMenuOpen && (
+            <div
+              className="header-phone__title"
+              onClick={handleTitleClick}
+              style={{ cursor: 'pointer' }} 
+            >
               INES URIBE
             </div>
           )}
@@ -107,7 +123,7 @@ function HeaderPhone({ isMenuOpen, setIsMenuOpen, className }) {
       {isMenuOpen && showArtSubmenu && (
         <div className="mobile-menu submenu">
           <nav className="mobile-menu__nav" onClick={e => e.stopPropagation()}>
-            <div className="arrow-icon">
+            <div className="arrow-icon-left">
               <button onClick={() => setShowArtSubmenu(false)}>
                 <KeyboardArrowLeftIcon />
               </button>
@@ -161,7 +177,7 @@ function HeaderPhone({ isMenuOpen, setIsMenuOpen, className }) {
       {isMenuOpen && showCodeSubmenu && (
         <div className="mobile-menu submenu">
           <nav className="mobile-menu__nav" onClick={e => e.stopPropagation()}>
-            <div className="arrow-icon">
+            <div className="arrow-icon-left">
               <button onClick={() => setShowCodeSubmenu(false)}>
                 <KeyboardArrowLeftIcon />
               </button>
@@ -169,13 +185,6 @@ function HeaderPhone({ isMenuOpen, setIsMenuOpen, className }) {
             <Link
               to="/code?category=all"
               className="mobile-menu__link"
-              // onClick={() => {
-              //   setIsMenuOpen(false);
-              //   window.scrollTo({
-              //     top: 0,
-              //     behavior: 'smooth'
-              //   });
-              // }}
               onClick={() => {
                 setSearchParams({ category: 'all' });
                 setIsMenuOpen(false);
@@ -190,13 +199,6 @@ function HeaderPhone({ isMenuOpen, setIsMenuOpen, className }) {
             <Link
               to="/code?category=frontend"
               className="mobile-menu__link"
-              // onClick={() => {
-              //   setIsMenuOpen(false);
-              //   window.scrollTo({
-              //     top: 0,
-              //     behavior: 'smooth'
-              //   });
-              // }}
               onClick={() => {
                 setSearchParams({ category: 'front-end' });
                 setIsMenuOpen(false);
@@ -211,13 +213,6 @@ function HeaderPhone({ isMenuOpen, setIsMenuOpen, className }) {
             <Link
               to="/code?category=fullstack"
               className="mobile-menu__link"
-              // onClick={() => {
-              //   setIsMenuOpen(false);
-              //   window.scrollTo({
-              //     top: 0,
-              //     behavior: 'smooth'
-              //   });
-              // }}
               onClick={() => {
                 setSearchParams({ category: 'full-stack' });
                 setIsMenuOpen(false);
@@ -235,5 +230,6 @@ function HeaderPhone({ isMenuOpen, setIsMenuOpen, className }) {
     </>
   );
 }
+
 
 export default HeaderPhone;

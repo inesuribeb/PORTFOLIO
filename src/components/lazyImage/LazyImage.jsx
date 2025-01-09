@@ -1,4 +1,3 @@
-// components/LazyImage.jsx
 import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -18,7 +17,7 @@ function LazyImage({ src, alt }) {
       style={{ 
         backgroundColor: '#e0e0e0',
         position: 'relative',
-        paddingBottom: '100%' // Mantiene el aspect ratio 1:1
+        paddingBottom: '100%' 
       }}
     >
       {inView && (

@@ -1,37 +1,28 @@
 .webproject-container {
-    margin-top: 100px;
-    padding: 0px;
+  margin-top: 100px;
+  padding: 0px;
 }
+
 .web-projects {
-    transition: margin-bottom 0.5s ease;
+  transition: margin-bottom 0.5s ease;
 }
 
 .web-section {
-    margin-bottom: 80px;
-    transition: margin-bottom 0.5s ease;
+  margin-bottom: 80px;
+  transition: margin-bottom 0.5s ease;
 }
 
 .web-section.active {
-    margin-bottom: 200px;
+  margin-bottom: 200px;
 }
 
-
-
 .categories {
-    display: flex;
-    gap: 5px;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .categories span {
-    cursor: pointer;
-  }
-  
-  /* .categories span.active {
-    font-weight: bold;
-  } */
-  
-  /* .separator {
-    cursor: default;
-  } */
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.categories span {
+  cursor: pointer;
+}

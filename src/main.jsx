@@ -13,11 +13,7 @@ const HomePhone = React.lazy(() => import('./pages/home/HomePhone.jsx'));
 const PhotoDesign = React.lazy(() => import('./pages/art/PhotoDesign.jsx'));
 const PhotoDesignPhone = React.lazy(() => import('./pages/art/PhotoDesignPhone.jsx'));
 const WebProjects = React.lazy(() => import('./pages/code/WebProjects.jsx'));
-// const WebProjectsPhone = React.lazy(() => import('./pages/code/WebProjectsPhone.jsx'));
-
-// const PortfolioProjectSection = React.lazy(() => import('./pages/code/PortfolioProjectSection.jsx'));
 const PortfolioProjectSection = React.lazy(() => import('./pages/code/PortfolioProjectSection.jsx'));
-
 const Contact = React.lazy(() => import('./pages/contact/Contact.jsx'));
 const ContactPhone = React.lazy(() => import('./pages/contact/ContactPhone.jsx'));
 
@@ -52,7 +48,6 @@ const router = createBrowserRouter([
       {
         path: 'art',
         element: <ResponsiveComponent 
-          // MobileVersion={PhotoDesignPhone} 
           MobileVersion={PhotoDesignPhone} 
           DesktopVersion={PhotoDesign} 
         />
@@ -60,7 +55,6 @@ const router = createBrowserRouter([
       {
         path: 'code',
         element: <ResponsiveComponent 
-          // MobileVersion={WebProjectsPhone} 
           MobileVersion={PortfolioProjectSection} 
           DesktopVersion={WebProjects} 
         />

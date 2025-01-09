@@ -59,11 +59,11 @@
 
 .nav-button {
   position: fixed; ;
-    background: red;  /* o el color que prefieras */
+    background: red;  
     border: none;
-    width: 20px;       /* ancho y alto iguales para hacer un círculo */
+    width: 20px;    
     height: 20px;
-    border-radius: 50%; /* esto lo hace circular */
+    border-radius: 50%; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,7 +85,6 @@
   opacity: 0.8;
 }
 
-/* Media query para móvil */
 @media (max-width: 767px) {
   .modal-content {
     width: 100%;

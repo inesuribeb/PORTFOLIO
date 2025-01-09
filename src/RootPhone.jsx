@@ -56,7 +56,13 @@ function RootPhone() {
         onMenuClick={handleMenuClick}
         className={location.pathname === '/contact' ? 'header-special-bg' : ''}
       />
-      <div className={`root-phone__content ${isMenuOpen ? 'shifted' : ''}`}>
+      {/* <div className={`root-phone__content ${isMenuOpen ? 'shifted' : ''}`}>
+        <Outlet context={{ isMenuOpen, setIsMenuOpen }} />
+      </div> */}
+      <div 
+        className={`root-phone__content ${isMenuOpen ? 'shifted' : ''}`}
+        key={location.pathname} 
+      >
         <Outlet context={{ isMenuOpen, setIsMenuOpen }} />
       </div>
     </>
