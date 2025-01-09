@@ -55,6 +55,9 @@ function HeaderPhone({ isMenuOpen, setIsMenuOpen, className }) {
   return (
     <>
       <header className={"header-phone " + className}>
+      {/* <header className={`header-phone ${location.pathname === '/contact' && 'header-special-bg'}`}> */}
+
+
         <div className="header-phone__container">
 
           <button

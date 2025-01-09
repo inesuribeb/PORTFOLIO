@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import Header from './components/header/Header';
 import React, { useState, useEffect } from 'react';
 import Contact from './pages/contact/Contact';
@@ -7,6 +8,7 @@ import './Root.css'
 function Root() {
     const [isContactOpen, setIsContactOpen] = useState(false);
     const [isUserScrolling, setIsUserScrolling] = useState(false);
+    const location = useLocation();
 
     useEffect(() => {
         if (isContactOpen) {
@@ -55,7 +57,7 @@ function Root() {
             />
             <div className={`main-content ${isContactOpen ? 'shifted' : ''}`}>
                 <Header onContactClick={handleContactClick} />
-                <main>
+                <main className='outlet-desktop' key={location.pathname}>
                     <Outlet />
                 </main>
             </div>

@@ -86,12 +86,17 @@
 }
 
 @media (max-width: 767px) {
+
+  .modal-overlay {
+    z-index: 150;
+    position: fixed;
+
+  }
   .modal-content {
     width: 100%;
     height: auto;
     padding: 20px;
     background-color: transparent;
-
   }
 
   .modal-content .image-wrapper::before {

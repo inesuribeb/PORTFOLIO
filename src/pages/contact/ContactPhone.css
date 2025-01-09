@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 85px;
+    top: 84px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -31,6 +31,7 @@
     justify-content: center;
     text-align: center;
     font-family: 'Pragmatica';
+    font-family: 'Work Sans', sans-serif;
     font-size: 12px;
     background-color: #E4B5C2;
 
@@ -103,6 +104,7 @@
     display: flex;
     align-items: center;
     font-family: 'Pragmatica';
+    font-family: 'Work Sans', sans-serif;
     background-color: #E4B5C2;
 
 }
@@ -111,6 +113,7 @@
     border-top: 1px solid #D50429;
     border-bottom: 1px solid #D50429;
     font-family: 'Pragmatica';
+    font-family: 'Work Sans', sans-serif;
     font-size: 15px;
     padding-right: 20px;
     padding-left: 20px;
@@ -138,5 +141,6 @@
     text-align: center;
     margin: 0;
     font-family: 'Pragmatica';
+    font-family: 'Work Sans', sans-serif;
     background-color: #E4B5C2;
 }
