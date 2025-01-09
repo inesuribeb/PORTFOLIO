@@ -1,27 +1,15 @@
 import { Outlet } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import HeaderPhone from './components/header/HeaderPhone';
 import { useState, useEffect } from 'react';
 import './RootPhone.css'
 
-// function RootPhone() {
-//   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-//   return (
-//     <>
-      
-//       <HeaderPhone isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-//     <div className="root-phone__content">
-//       <Outlet context={{ isMenuOpen, setIsMenuOpen }} />
-//     </div>
-//     </>
-//   );
-// }
-
-// export default RootPhone;
 
 function RootPhone() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isUserScrolling, setIsUserScrolling] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -65,7 +53,8 @@ function RootPhone() {
       <HeaderPhone 
         isMenuOpen={isMenuOpen} 
         setIsMenuOpen={setIsMenuOpen}
-        onMenuClick={handleMenuClick}  // Añade esta prop
+        onMenuClick={handleMenuClick}
+        className={location.pathname === '/contact' ? 'header-special-bg' : ''}
       />
       <div className={`root-phone__content ${isMenuOpen ? 'shifted' : ''}`}>
         <Outlet context={{ isMenuOpen, setIsMenuOpen }} />

@@ -5,7 +5,7 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import './HeaderPhone.css'
 
-function HeaderPhone({ isMenuOpen, setIsMenuOpen }) {
+function HeaderPhone({ isMenuOpen, setIsMenuOpen, className }) {
 
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -47,7 +47,7 @@ function HeaderPhone({ isMenuOpen, setIsMenuOpen }) {
 
   return (
     <>
-      <header className="header-phone">
+      <header className={ "header-phone " + className}>
         <div className="header-phone__container">
 
           <button

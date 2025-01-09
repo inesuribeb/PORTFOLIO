@@ -7,7 +7,7 @@
     /* background-color: #481311; */
     /* background-color: #220908; */
     /* background-color: #F4D3D7; */
-    background-color: #FE92C5;
+    background-color: #E4B5C2;
 
     padding: 0;
     transition: all 0.7s ease-out;
@@ -52,7 +52,7 @@
     box-sizing: border-box;
     font-size: clamp(0.8rem, 1vw, 1rem);
     /* color: #E69CA5; */
-    color: #D52725;
+    color: #D50429;
 
 
 }
@@ -68,7 +68,7 @@
     font-family: 'Times New Roman', Times, serif;
     box-sizing: border-box;
     /* color: #E69CA5; */
-    color: #D52725;
+    color: #D50429;
     font-family: 'Pragmatica';
 
 }
@@ -93,7 +93,7 @@
     font-weight: 800;
     width: 80%;
     /* color: #E69CA5; */
-    color: #D52725;
+    color: #D50429;
 }
 
 .second-line-contact ul li a {
@@ -154,7 +154,7 @@
     font-size: 30px;
     font-family: 'Pragmatica';
     /* color: #E69CA5; */
-    color: #D52725;
+    color: #D50429;
     cursor: pointer;
     font-size: 0.83em;
     font-weight: 800;

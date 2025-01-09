@@ -33,7 +33,6 @@
     bottom: 0;
     background: #f4f4f4;
     border-left: 1px solid black;
-    /* border-top: 1px solid red; */
     z-index: 100;
     opacity: 0;
     animation: fadeIn 0.2s ease-in-out 0.2s forwards;
@@ -51,6 +50,9 @@
 
     padding-right: 30px;
 }
+.header-special-bg *{
+    background-color: #E4B5C2;
+  }
 
 @keyframes fadeIn {
     from {
@@ -75,7 +77,7 @@
 }
 
 .mobile-menu__link span:last-child {
-    margin-left: auto; /* Empuja la flecha hacia la derecha */
+    margin-left: auto; 
 }
 
 .mobile-menu__link:hover {
@@ -124,7 +126,6 @@
     transition: transform 0.3s ease-in-out;
 }
 
-/* Posiciones iniciales */
 .hamburger-line.top {
     transform: translateY(-6px);
 }
@@ -133,7 +134,6 @@
     transform: translateY(6px);
 }
 
-/* Primera fase: unir las líneas */
 .hamburger-button.active .hamburger-line.top {
     transform: translateY(0);
     transition: transform 0.3s ease-in-out;
@@ -144,12 +144,10 @@
     transition: transform 0.3s ease-in-out;
 }
 
-/* Segunda fase: rotación para formar la cruz */
 .hamburger-button.active .hamburger-line.top,
 .hamburger-button.active .hamburger-line.middle,
 .hamburger-button.active .hamburger-line.bottom {
     transition: transform 0.2s ease-in-out 0.2s;
-    /* Delay de 0.3s para esperar a que se unan */
 }
 
 .hamburger-button.active .hamburger-line.top,
@@ -175,21 +173,18 @@
 
 .submenu-header {
     display: flex;
-    /* align-items: center; */
     padding-bottom: 20px;
 }
 
 .submenu-header button {
     background: none;
     border: none;
-    /* padding: 10px; */
     cursor: pointer;
     color: inherit;
     display: flex;
     align-items: center;
 }
 
-/* Opcional: si quieres dar un poco de espacio al ícono */
 
 
 

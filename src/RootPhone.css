@@ -6,6 +6,6 @@
     transition: transform 0.3s ease-out;
 }
 
-.main-content.shifted {
+/* .main-content.shifted {
     transform: translateY(100vh);
-} 
+}  */
