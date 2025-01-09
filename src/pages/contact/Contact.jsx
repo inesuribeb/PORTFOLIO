@@ -4,8 +4,11 @@ import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 
 import './Contact.css'
 
-function Contact({ isOpen, onClose }) {
+function Contact({ isOpen, onClose, headerClosing }) {
     const [time, setTime] = useState(new Date());
+    const [localClosing, setLocalClosing] = useState(false);
+    const isClosing = localClosing || headerClosing;
+
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -15,9 +18,19 @@ function Contact({ isOpen, onClose }) {
         return () => clearInterval(timer);
     }, []);
 
+    const handleClose = () => {
+        setLocalClosing(true);
+        setTimeout(() => {
+            setLocalClosing(false);
+            onClose();
+        }, 600);
+    };
+
+    const className = `contact-page ${isOpen ? 'open' : ''} ${isClosing ? 'closing' : ''}`;
+
     return (
-        <div className={`contact-page ${isOpen ? 'open' : ''}`}>
-            <button className="close-button" onClick={onClose}>Close</button>
+        <div className={className}>
+            <button className="close-button" onClick={handleClose}>Close</button>
 
             <div className='first-column-contact'>
                 <div className='first-line-contact'>
@@ -74,7 +87,7 @@ function Contact({ isOpen, onClose }) {
                     <h5>inesuribeb@gmail.com</h5>
                 </div>
                 <div className='second-line-contact'>
-                    <p>Designer with a strong background in <i>visual communication</i>, currently expanding my skill set as a <i>full-stack web developer</i>.<br /><br /> With a passion for merging <i>creativity</i> with <i>technology</i>, I aim to create digital experiences that are both <i>aesthetically</i> pleasing and <i>functionally</i> effective. I focus on designing user-centric solutions that balance <i>innovation</i>, <i>design principles</i>, and <i>technical expertise</i>.</p>
+                    <p>Designer with a strong background in <i>visual communication</i>, currently expanding my skill set as a <i>full-stack web developer</i>.<br /><br /> With a passion for merging <i>creativity</i> with <i>technology</i>, I aim to create digital experiences that are both <i>aesthetically</i> pleasing and <i>functionally</i> effective. I focus on designing user-centric solutions that balance <i>innovation</i>, <i>design principles</i>, and <i>technical approach</i>.</p>
                 </div>
             </div>
         </div>

@@ -45,26 +45,26 @@ function PhotoDesignPhone() {
     { src: "/CAPTURAS/bolsoro.png", alt: "detalle de bolso rojo", category: "Photography", order: 17 },
     { src: "/CAPTURAS/alazne.png", alt: "foto mujer en blanco y negro", category: "Photography", order: 18 },
     { src: "/CAPTURAS/señoramosca.png", alt: "foto de una mosca en un sombrero de señora", category: "Photography", order: 19 },
-    { src: "/CAPTURAS/paisaje2.png", alt: "paisaje", category: "Photography", order: 20 },  
+    { src: "/CAPTURAS/paisaje2.png", alt: "paisaje", category: "Photography", order: 20 },
     { src: "/CAPTURAS/design2.PNG", alt: "paisaje", category: "Design", order: 21 },
     { src: "/CAPTURAS/nwhr.png", alt: "pescador porta un pez", category: "Photography", order: 22 },
     { src: "/CAPTURAS/ZABRAZO.png", alt: "chicas abrazandose", category: "Photography", order: 23 },
+    { src: "/CAPTURAS/design8.PNG", alt: "chicas abrazandose", category: "Design", order: 24 }
   ];
 
   const column3Images = [
-    { src: "/CAPTURAS/1.1.1.png", alt: "chico acrobacia", category: "Photography", order: 24 },
-    { src: "/CAPTURAS/design6.PNG", alt: "chico acrobacia", category: "Design", order: 25 },
-    { src: "/CAPTURAS/1.1.1.1.png", alt: "nose", category: "Photography", order: 26 },
-    { src: "/CAPTURAS/BOSQUENOCHE.jpg", alt: "casa en el bosque de noche", category: "Photography", order: 27 },
-    { src: "/CAPTURAS/senegalstyle.png", alt: "chico senegales bien vestido", category: "Photography", order: 28 },
-    { src: "/CAPTURAS/design3.PNG", alt: "chico senegales bien vestido", category: "Design", order: 29 },
-    { src: "/CAPTURAS/MANOSATRAS.png", alt: "manos de chica puestos atras", category: "Photography", order: 30 },
-    { src: "/CAPTURAS/albamorado.png", alt: "chica con vestido morado", category: "Photography", order: 31 },
-    { src: "/CAPTURAS/helenpies.png", alt: "chica sentada en cama", category: "Photography", order: 32 },
-    { src: "/CAPTURAS/paisaje1.png", alt: "PAISAJE", category: "Photography", order: 33 },
-    { src: "/CAPTURAS/elen.png", alt: "foto detalle de ojo azul de chica", category: "Photography", order: 34 },
-    { src: "/CAPTURAS/ZMALLORCA.png", alt: "terraza en atardecer", category: "Photography", order: 35 },
-    { src: "/CAPTURAS/design8.PNG", alt: "chicas abrazandose", category: "Design", order: 36 }
+    { src: "/CAPTURAS/1.1.1.png", alt: "chico acrobacia", category: "Photography", order: 25 },
+    { src: "/CAPTURAS/design6.PNG", alt: "chico acrobacia", category: "Design", order: 26 },
+    { src: "/CAPTURAS/1.1.1.1.png", alt: "nose", category: "Photography", order: 27 },
+    { src: "/CAPTURAS/BOSQUENOCHE.jpg", alt: "casa en el bosque de noche", category: "Photography", order: 28 },
+    { src: "/CAPTURAS/senegalstyle.png", alt: "chico senegales bien vestido", category: "Photography", order: 29 },
+    { src: "/CAPTURAS/design3.PNG", alt: "chico senegales bien vestido", category: "Design", order: 30 },
+    { src: "/CAPTURAS/MANOSATRAS.png", alt: "manos de chica puestos atras", category: "Photography", order: 31 },
+    { src: "/CAPTURAS/albamorado.png", alt: "chica con vestido morado", category: "Photography", order: 32 },
+    { src: "/CAPTURAS/helenpies.png", alt: "chica sentada en cama", category: "Photography", order: 33 },
+    { src: "/CAPTURAS/paisaje1.png", alt: "PAISAJE", category: "Photography", order: 34 },
+    { src: "/CAPTURAS/elen.png", alt: "foto detalle de ojo azul de chica", category: "Photography", order: 35 },
+    { src: "/CAPTURAS/ZMALLORCA.png", alt: "terraza en atardecer", category: "Photography", order: 36 },
   ];
 
   const allImages = [...column1Images, ...column2Images, ...column3Images];

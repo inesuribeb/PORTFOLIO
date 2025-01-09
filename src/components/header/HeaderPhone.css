@@ -3,14 +3,10 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 40;
+    z-index: 10;
     /* font-family: 'Pragmatica', -apple-system, BlinkMacSystemFont, sans-serif; */
     font-family: 'Work Sans', sans-serif;
     background: transparent; 
-    /* background-color:  #f4f4f4; */
-    /* isolation: isolate; */
-    /* transform: translateZ(0); */
-
 }
 
 .header-phone__container {

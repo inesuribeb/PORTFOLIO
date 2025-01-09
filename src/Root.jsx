@@ -7,6 +7,7 @@ import './Root.css'
 
 function Root() {
     const [isContactOpen, setIsContactOpen] = useState(false);
+    const [headerClosing, setHeaderClosing] = useState(false);
     const [isUserScrolling, setIsUserScrolling] = useState(false);
     const location = useLocation();
 
@@ -16,12 +17,10 @@ function Root() {
 
             const handleScroll = () => {
                 clearTimeout(scrollTimeout);
-
                 setIsUserScrolling(true);
 
                 scrollTimeout = setTimeout(() => {
                     setIsUserScrolling(false);
-
                     if (window.scrollY > 0) {
                         setIsContactOpen(false);
                     }
@@ -37,23 +36,27 @@ function Root() {
     }, [isContactOpen]);
 
     const handleContactClick = () => {
-        setIsContactOpen(!isContactOpen);
-
-        if (!isContactOpen) {
+        if (isContactOpen) {
+            setHeaderClosing(true);
+            setTimeout(() => {
+                setHeaderClosing(false);
+                setIsContactOpen(false);
+            }, 600);
+        } else {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
+            setIsContactOpen(true);
         }
     };
-
-
 
     return (
         <div className="root-container">
             <Contact
                 isOpen={isContactOpen}
                 onClose={() => setIsContactOpen(false)}
+                headerClosing={headerClosing}
             />
             <div className={`main-content ${isContactOpen ? 'shifted' : ''}`}>
                 <Header onContactClick={handleContactClick} />
@@ -62,7 +65,6 @@ function Root() {
                 </main>
             </div>
         </div>
-
     );
 }
 

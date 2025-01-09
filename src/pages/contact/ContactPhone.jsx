@@ -82,7 +82,7 @@ function ContactPhone() {
 
         <div className='second-part'>
           <div className="contact-presentation">
-            <p>Designer with a strong background in <i>visual communication</i>, currently expanding my skill set as a <i>full-stack web developer</i>.<br /><br /> With a passion for merging <i>creativity</i> with <i>technology</i>, I aim to create digital experiences that are both <i>aesthetically</i> pleasing and <i>functionally</i> effective. I focus on designing user-centric solutions that balance <i>innovation</i>, <i>design principles</i>, and <i>technical expertise</i>.</p>
+            <p>Designer with a strong background in <i>visual communication</i>, currently expanding my skill set as a <i>full-stack web developer</i>.<br /><br /> With a passion for merging <i>creativity</i> with <i>technology</i>, I aim to create digital experiences that are both <i>aesthetically</i> pleasing and <i>functionally</i> effective. I focus on designing user-centric solutions that balance <i>innovation</i>, <i>design principles</i>, and <i>technical approach</i>.</p>
           </div>
           <div className='city-and-hour'>
             <h5>Bilbao, Spain<br />

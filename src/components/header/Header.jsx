@@ -1,27 +1,53 @@
-import { Link , useLocation} from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
 function Header({ onContactClick }) {
 
   const location = useLocation();
+  const [closing, setClosing] = useState(false);
 
-  const handleNavClick = () => {
+  const handleContactToggle = () => {
     const mainContent = document.querySelector('.main-content');
     if (mainContent?.classList.contains('shifted')) {
+      setClosing(true);
+      setTimeout(() => {
+        setClosing(false);
+        onContactClick();
+      }, 600);
+    } else {
       onContactClick();
     }
   };
 
-  const handleLinkClick = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
+  // const handleNavClick = () => {
+  //   const mainContent = document.querySelector('.main-content');
+  //   if (mainContent?.classList.contains('shifted')) {
+  //     handleContactToggle();
+  //     setTimeout(() => {
+  //       window.scrollTo({
+  //         top: 0,
+  //         behavior: 'smooth'
+  //       });
+  //     }, 600);
+  //   } else {
+  //     window.scrollTo({
+  //       top: 0,
+  //       behavior: 'smooth'
+  //     });
+  //   }
+  // };
 
-  const handleCombinedClick = () => {
-    handleNavClick();
-    handleLinkClick();
+  const handleNavClick = () => {
+    const mainContent = document.querySelector('.main-content');
+    if (mainContent?.classList.contains('shifted')) {
+      handleContactToggle();
+    } else {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
   };
 
   const isActive = (path) => {
@@ -31,7 +57,11 @@ function Header({ onContactClick }) {
   return (
     <div className="header-container-desktop">
       <div className="header-home-desktop">
-        <Link to="/" onClick={handleCombinedClick}>
+        <Link to="/"
+          // onClick={handleCombinedClick}
+          onClick={handleNavClick}
+
+        >
           <h1>Ines Uribe</h1>
         </Link>
       </div>
@@ -39,26 +69,27 @@ function Header({ onContactClick }) {
         <nav>
           <ul>
             <li>
-              <Link 
-              to="/art" 
-              onClick={handleCombinedClick}
-              className={isActive('/art') ? 'active' : ''}
+              <Link
+                to="/art"
+                onClick={handleNavClick}
+                className={isActive('/art') ? 'active' : ''}
               >
                 Art
               </Link>
             </li>
             <li>
-              <Link 
-              to="/code" 
-              onClick={handleCombinedClick}
-              className={isActive('/code') ? 'active' : ''}
+              <Link
+                to="/code"
+                onClick={handleNavClick}
+                className={isActive('/code') ? 'active' : ''}
               >
                 Code
               </Link>
             </li>
             <li>
               <button
-                onClick={onContactClick}
+                onClick={handleContactToggle}
+
                 className="contact-button"
               >
                 Contact

@@ -8,7 +8,7 @@
     align-items: center;
     color: white; 
     position: relative;
-    /* animation: fadeInBg 2s ease-in forwards; */
+    animation: fadeInBg 0.5s ease-in forwards;
 }
 
 @keyframes fadeInBg {
