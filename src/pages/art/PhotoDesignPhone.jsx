@@ -65,6 +65,7 @@ function PhotoDesignPhone() {
     { src: "/CAPTURAS/paisaje1.png", alt: "PAISAJE", category: "Photography", order: 34 },
     { src: "/CAPTURAS/elen.png", alt: "foto detalle de ojo azul de chica", category: "Photography", order: 35 },
     { src: "/CAPTURAS/ZMALLORCA.png", alt: "terraza en atardecer", category: "Photography", order: 36 },
+    { src: "/CAPTURAS/swipe.png", alt: "swipe", category: "Design", order: 37 }
   ];
 
   const allImages = [...column1Images, ...column2Images, ...column3Images];
