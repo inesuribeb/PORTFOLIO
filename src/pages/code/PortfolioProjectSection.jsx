@@ -45,6 +45,26 @@ function PortfolioProjectSection() {
 
   const projectsData = [
     {
+      title: "KAZOKU",
+      description: "Kazoku is a social network for developers, allowing users to create profiles, showcase web projects, and link social media accounts. It features a like system, followers/following, and an internal chat for connecting with other developers. For non-users, it also serves as an inspiring website for web development ideas.",
+      category: "Full-stack",
+      method: "React • JavaScript • CSS3 • Mongo DB • Node • Multer • Socket IO",
+      link: "https://github.com/EkaitzGA/kazoku",
+      images: [
+        { src: "https://i.ibb.co/2VvcwMc/favicon.jpg", alt: "descripción2" },
+        { src: "https://i.ibb.co/qYbGPTR0/2k.png", alt: "descripción1" },
+        { src: "https://i.ibb.co/PXRFRXR/10k.png", alt: "descripción1" },
+
+        { src: "https://i.ibb.co/8D0qhHwY/3k.png", alt: "descripción2" },
+        { src: "https://i.ibb.co/b523GVpT/6k.png", alt: "descripción2" },
+        { src: "https://i.ibb.co/tpW2tK8X/5k.png", alt: "descripción2" },
+        { src: "https://i.ibb.co/YTLtSLNq/4k.png", alt: "descripción2" },
+        { src: "https://i.ibb.co/84bNmZn6/1k.png", alt: "descripción2" },
+        { src: "https://i.ibb.co/HDmvLmtZ/9k.png", alt: "descripción2" },
+        
+      ]
+    },
+    {
       title: "SWIPE AGENCY",
       description: "SWIPE AGENCY is a fashion representation agency based in Bilbao. Its brands combine design and tradition. The platform is a React-based digital catalog with responsive design, exclusive layouts for desktop and mobile, and dynamic navigation.",
       category: "frontend",
@@ -91,12 +111,13 @@ function PortfolioProjectSection() {
       method: "MySQL • React • CSS3 • JavaScript",
       link: "https://github.com/inesuribeb/The-Bike_Country-Frontend-2-",
       images: [
-        { src: "https://cdn.pixabay.com/photo/2023/03/16/15/17/rectangle-7856945_1280.png", alt: "descripción1" },
-        { src: "https://cdn.pixabay.com/photo/2023/03/16/15/17/rectangle-7856945_1280.png", alt: "descripción1" },
-        { src: "https://cdn.pixabay.com/photo/2023/03/16/15/17/rectangle-7856945_1280.png", alt: "descripción1" },
-        { src: "https://cdn.pixabay.com/photo/2023/03/16/15/17/rectangle-7856945_1280.png", alt: "descripción1" },
-        { src: "https://cdn.pixabay.com/photo/2023/03/16/15/17/rectangle-7856945_1280.png", alt: "descripción1" },
-        { src: "https://cdn.pixabay.com/photo/2023/03/16/15/17/rectangle-7856945_1280.png", alt: "descripción1" },
+        { src: "https://i.ibb.co/Q3r16jgG/tbc9.png", alt: "descripción1" },
+        { src: "https://i.ibb.co/Y4zt3tjP/tbc8.png", alt: "descripción1" },
+        { src: "https://i.ibb.co/HTYh3ZSR/tbc7.png", alt: "descripción1" },
+        { src: "https://i.ibb.co/HTkJMwwV/tbc6.png", alt: "descripción1" },
+        { src: "https://i.ibb.co/JRzkWJwG/tbc4.png", alt: "descripción1" },
+        { src: "https://i.ibb.co/LDT5mBtM/tbc3.png", alt: "descripción1" },
+        { src: "https://i.ibb.co/tpmzrtcP/tbc10.png", alt: "descripción1" },
       ]
     },
     {
