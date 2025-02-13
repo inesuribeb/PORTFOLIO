@@ -39,16 +39,26 @@ const Home = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  // const handlePageClick = (e) => {
+  //   if (isPageClickEnabled && !e.target.closest('.title')) {
+  //     navigate('/art');
+  //   }
+  // };
+
+  // const handleTitleClick = (e) => {
+  //   e.stopPropagation(); 
+  //   navigate('/art');
+  // };
+
   const handlePageClick = (e) => {
-    // Si el clic no fue en el título y está habilitado el clic en la página
     if (isPageClickEnabled && !e.target.closest('.title')) {
-      navigate('/art');
+      navigate('/art', { state: { from: '/' } });
     }
   };
-
+  
   const handleTitleClick = (e) => {
-    e.stopPropagation(); // Evita que el clic se propague al contenedor
-    navigate('/art');
+    e.stopPropagation();
+    navigate('/art', { state: { from: '/' } });
   };
 
   return (

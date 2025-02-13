@@ -12,6 +12,7 @@
 
 .root-phone__content {
   background-color:  #f4f4f4;
+  /* background-color: #F6EAD3; */
   min-height: 100vh;
 }
 
@@ -19,6 +20,7 @@ html, body {
   margin: 0; 
   height: 100%; 
   background-color: #f4f4f4;
+  /* background-color: #F6EAD3; */
   flex-direction: column;
   display: flex;
 }
@@ -47,6 +49,8 @@ h1 {
 #root {
   min-height: 100vh;
   background-color: #f4f4f4;
+  /* background-color: #F6EAD3; */
+
 }
 
 main {
@@ -54,4 +58,6 @@ main {
   padding: 20px;
   margin-top: 10vh;
   background-color: #f4f4f4;
+  /* background-color: #F6EAD3; */
+
 }

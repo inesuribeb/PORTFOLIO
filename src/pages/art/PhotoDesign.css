@@ -1,12 +1,28 @@
+@font-face {
+    font-family: 'Argesta';
+    src: url('/fonts/argestadisplay-regular-webfont.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Swiza';
+    src: url('/fonts/swiza-medium-webfont.ttf') format('truetype');
+}
 .categories {
+    /* position: sticky;
+    top: 30px; */
     text-align: center;
     padding: 20px 0;
     margin-top: 130px;
-    font-family: 'Times New Roman';
+    /* font-family: 'Times New Roman'; */
     font-size: 28px;
     letter-spacing: 0.05em;
     margin-bottom: 90px;
+    z-index: 2000;
+    pointer-events: all; 
+    transition: all 0.3s ease; /* Para hacer la transición más suave */
+    margin-bottom: 0; /* Quita el margin bottom */
+    font-family: 'Argesta';
 }
+
 
 .categories span {
     cursor: pointer;
@@ -30,7 +46,6 @@
     border-top: 2px solid black;
     /* padding: 5px; */
     margin: 30px;
-
 }
 
 .contentContainer img {

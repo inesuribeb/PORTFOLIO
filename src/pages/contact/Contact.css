@@ -1,7 +1,7 @@
 .contact-page {
     width: 100%;
     height: 0;
-    background-color: #E4B5C2;
+    /* background-color: #E4B5C2; */
     padding: 0;
     /* transition: all 0.7s ease-out; */
     overflow: hidden;
@@ -13,6 +13,31 @@
 
     transform: translateY(-100%);
     height: 0;
+}
+
+.contact-page::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: calc(100% + 60px);
+    height: calc(100% + 60px);
+    background-image: url('/CAPTURAS/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(25px) saturate(0.8);
+    z-index: -1;
+    animation: zoomBackground 10s infinite alternate ease-in-out;
+}
+
+@keyframes zoomBackground {
+    0% {
+        background-size: 100%;
+    }
+    100% {
+        background-size: 160%;
+    }
 }
 
 .contact-page > div {
@@ -60,14 +85,16 @@
     font-weight: 800;
     box-sizing: border-box;
     font-size: clamp(0.8rem, 1vw, 1rem);
-    color: #D50429;
+    /* color: #D50429; */
+    color: wheat;
 }
 
 .third-column-contact p {
     background-color: transparent;
     font-size: clamp(2rem, 2.25vw, 1.65rem);
     box-sizing: border-box;
-    color: #D50429;
+    /* color: #D50429; */
+    color: wheat;
     /* font-family: 'Pragmatica'; */
     font-family: 'Work Sans', sans-serif;
 
@@ -94,7 +121,8 @@
 
     font-weight: 800;
     width: 80%;
-    color: #D50429;
+    /* color: #D50429; */
+    color: wheat;
 }
 
 .second-line-contact ul li a {
@@ -127,13 +155,20 @@
     top: 0.5rem;
     left: -1.7rem;
     width: 80%;
-    filter: brightness(0) 
+    /* filter: brightness(0) 
             saturate(100%)    
             invert(49%)                      
             sepia(75%)                      
             hue-rotate(310deg)              
             saturate(565%)                 
-            brightness(77%)  
+            brightness(77%)   */
+        filter: 
+            brightness(1.3)     /* Aumentamos el brillo */
+            invert(69%)                      
+            saturate(40%)      /* Reducimos la saturación para hacerlo más pastel */
+            sepia(40%)         /* Mantenemos algo de sepia para el tono cálido */
+            hue-rotate(30deg)  /* Rotamos hacia tonos más amarillentos */
+            brightness(96%); 
 }
 
 .second-line-contact ul li svg {
@@ -153,7 +188,8 @@
     /* font-family: 'Pragmatica'; */
     font-family: 'Work Sans', sans-serif;
 
-    color: #D50429;
+    /* color: #D50429; */
+    color: wheat;
     cursor: pointer;
     font-size: 0.83em;
     font-weight: 800;

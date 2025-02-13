@@ -33,7 +33,7 @@ function WebProjects() {
   const projectsData = [
     {
       title: "KAZOKU",
-      description: "Kazoku is a social network for developers, allowing users to create profiles, showcase web projects, and link social media accounts. It features a like system, followers/following, and an internal chat for connecting with other developers. For non-users, it also serves as an inspiring website for web development ideas.",
+      description: "Kazoku is a social network for developers, allowing users to create profiles, showcase web projects, and link social media accounts. It features a like system, followers/following, and an internal chat. For non-users, it also serves as an inspiring website for web development ideas. Developed with Saúl Mora, Ekaitz Guerra and Jon Latxiondo.",
       category: "Full-stack",
       method: "React • JavaScript • CSS3 • Mongo DB • Node • Multer • Socket IO",
       link: "https://github.com/EkaitzGA/kazoku",
@@ -53,6 +53,7 @@ function WebProjects() {
     },
     {
       title: "SWIPE AGENCY",
+      web: "https://swipeagency.es/",
       description: "SWIPE AGENCY is a fashion representation agency based in Bilbao. Its brands combine design and tradition. The platform is a React-based digital catalog with responsive design, exclusive layouts for desktop and mobile, and dynamic navigation.",
       category: "Front-end",
       method: "React • JavaScript • CSS3",
@@ -93,6 +94,7 @@ function WebProjects() {
     },
     {
       title: "The Bike Country",
+      web: "https://bikecountry.inesuribe.es/",
       description: "TBC is a premium tourism company specialized in cycling in the Basque Country (Euskadi). Its e-commerce platform enables users to explore packages, book experiences, and manage their journeys seamlessly. Developed in collaboration with Yeray Moreno and Estefania Mendes.",
       category: "Full-stack",
       method: "MySQL • React • CSS3 • JavaScript",

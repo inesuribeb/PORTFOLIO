@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
 function Header({ onContactClick }) {
+  const [shouldAnimate, setShouldAnimate] = useState(false);
 
   const location = useLocation();
   const [closing, setClosing] = useState(false);
@@ -54,6 +55,13 @@ function Header({ onContactClick }) {
     return location.pathname === path;
   };
 
+  useEffect(() => {
+    // Iniciar animación solo si venimos de home
+    if (location.state?.from === '/') {
+      setShouldAnimate(true);
+    }
+  }, []);
+
   return (
     <div className="header-container-desktop">
       <div className="header-home-desktop">
@@ -62,7 +70,7 @@ function Header({ onContactClick }) {
           onClick={handleNavClick}
 
         >
-          <h1>Ines Uribe</h1>
+          <h1 className={shouldAnimate ? 'typewriter' : ''}>Ines Uribe</h1>
         </Link>
       </div>
       <div className="navigator-desktop">
@@ -72,7 +80,8 @@ function Header({ onContactClick }) {
               <Link
                 to="/art"
                 onClick={handleNavClick}
-                className={isActive('/art') ? 'active' : ''}
+                // className={isActive('/art') ? 'active' : ''}
+                className={`${isActive('/art') ? 'active' : ''} ${shouldAnimate ? 'typewriter-delay-1' : ''}`}
               >
                 Art
               </Link>
@@ -81,7 +90,8 @@ function Header({ onContactClick }) {
               <Link
                 to="/code"
                 onClick={handleNavClick}
-                className={isActive('/code') ? 'active' : ''}
+                // className={isActive('/code') ? 'active' : ''}
+                className={`${isActive('/code') ? 'active' : ''} ${shouldAnimate ? 'typewriter-delay-2' : ''}`}
               >
                 Code
               </Link>
@@ -90,7 +100,9 @@ function Header({ onContactClick }) {
               <button
                 onClick={handleContactToggle}
 
-                className="contact-button"
+                // className="contact-button"
+                className={`contact-button ${shouldAnimate ? 'typewriter-delay-3' : ''}`}
+
               >
                 Contact
               </button>

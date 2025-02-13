@@ -1,14 +1,22 @@
 import './PhotoDesign.css';
-import React, { useState } from 'react';
+import React, { useState , useEffect} from 'react';
+import { useOutletContext } from 'react-router-dom';
+import ImageComponent from './ImageComponent';
 import Modal from './Modal';
 
 function PhotoDesign() {
 
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
+  const { 
+    isModalOpen, 
+    setIsModalOpen, 
+    selectedImage, 
+    setSelectedImage,
+    setNavigationHandlers
+  } = useOutletContext();
+  // const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [selectedImage, setSelectedImage] = useState(null);
 
   const column1Images = [
     { src: "/CAPTURAS/1.png", alt: "imagen de un niño", category: "Photography", order: 1 },
@@ -56,6 +64,7 @@ function PhotoDesign() {
     { src: "/CAPTURAS/swipe.png", alt: "swipe", category: "Design", order: 37 }
   ];
 
+
   const allImages = [...column1Images, ...column2Images, ...column3Images];
 
   const filteredImages = selectedCategory === 'All'
@@ -67,6 +76,14 @@ function PhotoDesign() {
     setIsModalOpen(true);
   };
 
+//   useEffect(() => {
+//     setNavigationHandlers({
+//         handleNext: handleNextImage,
+//         handlePrevious: handlePreviousImage
+//     });
+// }, [selectedCategory, filteredImages]);
+
+useEffect(() => {
   const handleNextImage = () => {
     const currentOrder = selectedImage.order;
     const nextImage = filteredImages.find(img => img.order > currentOrder) || filteredImages[0];
@@ -82,6 +99,27 @@ function PhotoDesign() {
     setSelectedImage(previousImage);
   };
 
+  setNavigationHandlers({
+    handleNext: handleNextImage,
+    handlePrevious: handlePreviousImage
+  });
+}, [selectedCategory, selectedImage]); 
+
+  // const handleNextImage = () => {
+  //   const currentOrder = selectedImage.order;
+  //   const nextImage = filteredImages.find(img => img.order > currentOrder) || filteredImages[0];
+  //   setSelectedImage(nextImage);
+  // };
+
+  // const handlePreviousImage = () => {
+  //   const currentOrder = selectedImage.order;
+  //   const previousImages = filteredImages.filter(img => img.order < currentOrder);
+  //   const previousImage = previousImages.length > 0
+  //     ? previousImages[previousImages.length - 1]
+  //     : filteredImages[filteredImages.length - 1];
+  //   setSelectedImage(previousImage);
+  // };
+
   const renderContent = () => {
     if (selectedCategory === 'All') {
       return (
@@ -90,12 +128,17 @@ function PhotoDesign() {
             {filteredImages
               .filter(img => img.order <= 11)
               .map(img => (
-                <img
+                // <img
+                //   key={img.order}
+                //   src={img.src}
+                //   alt={img.alt}
+                //   loading="lazy"
+                //   onClick={() => handleImageClick(img)}
+                // />
+                <ImageComponent 
                   key={img.order}
-                  src={img.src}
-                  alt={img.alt}
-                  loading="lazy"
-                  onClick={() => handleImageClick(img)}
+                  img={img}
+                  handleImageClick={handleImageClick}
                 />
               ))}
           </div>
@@ -103,12 +146,17 @@ function PhotoDesign() {
             {filteredImages
               .filter(img => img.order > 11 && img.order <= 24)
               .map(img => (
-                <img
+                // <img
+                //   key={img.order}
+                //   src={img.src}
+                //   alt={img.alt}
+                //   loading="lazy"
+                //   onClick={() => handleImageClick(img)}
+                // />
+                <ImageComponent 
                   key={img.order}
-                  src={img.src}
-                  alt={img.alt}
-                  loading="lazy"
-                  onClick={() => handleImageClick(img)}
+                  img={img}
+                  handleImageClick={handleImageClick}
                 />
               ))}
           </div>
@@ -116,12 +164,17 @@ function PhotoDesign() {
             {filteredImages
               .filter(img => img.order > 24)
               .map(img => (
-                <img
+                // <img
+                //   key={img.order}
+                //   src={img.src}
+                //   alt={img.alt}
+                //   loading="lazy"
+                //   onClick={() => handleImageClick(img)}
+                // />
+                <ImageComponent 
                   key={img.order}
-                  src={img.src}
-                  alt={img.alt}
-                  loading="lazy"
-                  onClick={() => handleImageClick(img)}
+                  img={img}
+                  handleImageClick={handleImageClick}
                 />
               ))}
           </div>
@@ -136,13 +189,18 @@ function PhotoDesign() {
       return columns.map((column, i) => (
         <div key={i} className={`column${i + 1}`}>
           {column.map(img => (
-            <img
-              key={img.order}
-              src={img.src}
-              alt={img.alt}
-              loading="lazy"
-              onClick={() => handleImageClick(img)}
-            />
+            // <img
+            //   key={img.order}
+            //   src={img.src}
+            //   alt={img.alt}
+            //   loading="lazy"
+            //   onClick={() => handleImageClick(img)}
+            // />
+            <ImageComponent 
+                  key={img.order}
+                  img={img}
+                  handleImageClick={handleImageClick}
+                />
           ))}
         </div>
       ));
@@ -150,7 +208,7 @@ function PhotoDesign() {
   };
 
   return (
-    <>
+    <div className="photo-design-container">
       <div className="categories">
         <span
           className={selectedCategory === 'All' ? 'active' : ''}
@@ -176,14 +234,14 @@ function PhotoDesign() {
       <section className="contentContainer">
         {renderContent()}
       </section>
-      <Modal
+      {/* <Modal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         image={selectedImage}
         onNext={handleNextImage}
         onPrevious={handlePreviousImage}
-      />
-    </>
+      /> */}
+    </div>
   );
 }
 

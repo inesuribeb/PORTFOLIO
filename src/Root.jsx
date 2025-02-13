@@ -3,6 +3,8 @@ import { useLocation } from 'react-router-dom';
 import Header from './components/header/Header';
 import React, { useState, useEffect } from 'react';
 import Contact from './pages/contact/Contact';
+import Modal from './pages/art/Modal';
+import Footer from './components/footer/Footer';
 import './Root.css'
 
 function Root() {
@@ -10,6 +12,14 @@ function Root() {
     const [headerClosing, setHeaderClosing] = useState(false);
     const [isUserScrolling, setIsUserScrolling] = useState(false);
     const location = useLocation();
+
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedImage, setSelectedImage] = useState(null);
+    const [navigationHandlers, setNavigationHandlers] = useState({
+        handleNext: () => {},
+        handlePrevious: () => {}
+    });
 
     useEffect(() => {
         if (isContactOpen) {
@@ -58,12 +68,33 @@ function Root() {
                 onClose={() => setIsContactOpen(false)}
                 headerClosing={headerClosing}
             />
-            <div className={`main-content ${isContactOpen ? 'shifted' : ''}`}>
+            {/* <div className={`main-content ${isContactOpen ? 'shifted' : ''}`}>
                 <Header onContactClick={handleContactClick} />
                 <main className='outlet-desktop' key={location.pathname}>
                     <Outlet />
                 </main>
+            </div> */}
+
+            <div className={`main-content ${isContactOpen ? 'shifted' : ''}`}>
+                <Header onContactClick={handleContactClick} />
+                <main className='outlet-desktop' key={location.pathname}>
+                    <Outlet context={{
+                        isModalOpen,
+                        setIsModalOpen,
+                        selectedImage,
+                        setSelectedImage,
+                        setNavigationHandlers
+                    }} />
+                </main>
+                <Footer></Footer>
             </div>
+            <Modal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                image={selectedImage}
+                onNext={navigationHandlers.handleNext}
+                onPrevious={navigationHandlers.handlePrevious}
+            />
         </div>
     );
 }

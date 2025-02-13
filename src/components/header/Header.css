@@ -1,3 +1,36 @@
+@keyframes typewriter {
+    from {
+      clip-path: inset(0 100% 0 0);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+  
+  .typewriter {
+    display: inline-block;
+    clip-path: inset(0 100% 0 0);
+    animation: typewriter 1s steps(10) forwards;
+  }
+  
+  .typewriter-delay-1 {
+    display: inline-block;
+    clip-path: inset(0 100% 0 0);
+    animation: typewriter 0.5s steps(3) 1s forwards;
+  }
+  
+  .typewriter-delay-2 {
+    display: inline-block;
+    clip-path: inset(0 100% 0 0);
+    animation: typewriter 0.5s steps(4) 1.5s forwards;
+  }
+  
+  .typewriter-delay-3 {
+    display: inline-block;
+    clip-path: inset(0 100% 0 0);
+    animation: typewriter 0.7s steps(7) 2s forwards;
+  }
+
 
 .header-container-desktop {
     display: flex;
@@ -7,7 +40,9 @@
     padding: 5px;
     position: relative;
     right: 10px;
-
+    background-color: transparent;
+    /* background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(18px); */
     position: sticky;
     top: 0;
     z-index: 100;
@@ -40,6 +75,13 @@
     margin: 0;
     /* font-family: 'Pragmatica'; */
     font-family: 'Work Sans', sans-serif;
+
+    /* padding: 35px 50px 8px 8px;    
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(18px);
+    border-radius: 5px;
+    border: 1px solid #3737371e; */
+    
 }
 
 .navigator-desktop {
@@ -48,6 +90,7 @@
     /* font-family: 'Pragmatica'; */
     font-family: 'Work Sans', sans-serif;
     letter-spacing: 0.30em;
+    
 }
 
 .navigator-desktop .active {
@@ -69,6 +112,12 @@
 .navigator-desktop li {
     margin-right: 20px;
     background-color: transparent;
+
+    /* padding: 35px 50px 8px 8px;    
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(18px);
+    border-radius: 5px;
+    border: 1px solid #3737371e; */
 }
 
 .navigator-desktop li:last-child {
