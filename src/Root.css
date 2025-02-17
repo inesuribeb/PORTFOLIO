@@ -11,3 +11,18 @@
         opacity: 1;
     }
   }
+
+  .footer {
+    animation: fadeInFooter 0.5s ease-in forwards;
+    animation-delay: 1s;
+    opacity: 0; /* Importante: establecer opacity inicial en 0 */
+}
+
+@keyframes fadeInFooter {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}

@@ -86,7 +86,7 @@ function Root() {
                         setNavigationHandlers
                     }} />
                 </main>
-                <Footer></Footer>
+                <Footer className="footer"></Footer>
             </div>
             <Modal
                 isOpen={isModalOpen}
